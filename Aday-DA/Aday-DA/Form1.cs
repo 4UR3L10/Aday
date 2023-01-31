@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aday_DA
 {
-    public partial class Form1 : Form
+    public partial class Form_Main : Form
     {
-        public Form1()
+        public Form_Main()
         {
             InitializeComponent();
         }
@@ -20,6 +20,11 @@ namespace Aday_DA
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bt_add_Plan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello World!","Message", MessageBoxButtons.OK,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1,MessageBoxOptions.DefaultDesktopOnly,false);
         }
     }
 }
