@@ -1,7 +1,7 @@
 ﻿
 namespace Aday_DA
 {
-    partial class Form1
+    partial class Form_Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,34 +29,72 @@ namespace Aday_DA
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.bt_add_Plan = new System.Windows.Forms.Button();
+            this.bt_delete_Plan_Event = new System.Windows.Forms.Button();
+            this.bt_add_Event = new System.Windows.Forms.Button();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // bt_add_Plan
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "HelloWorld";
+            this.bt_add_Plan.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bt_add_Plan.Location = new System.Drawing.Point(24, 71);
+            this.bt_add_Plan.Name = "bt_add_Plan";
+            this.bt_add_Plan.Size = new System.Drawing.Size(176, 85);
+            this.bt_add_Plan.TabIndex = 0;
+            this.bt_add_Plan.Text = "Add Plan";
+            this.bt_add_Plan.UseVisualStyleBackColor = true;
+            this.bt_add_Plan.Click += new System.EventHandler(this.bt_add_Plan_Click);
             // 
-            // Form1
+            // bt_delete_Plan_Event
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.bt_delete_Plan_Event.Enabled = false;
+            this.bt_delete_Plan_Event.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bt_delete_Plan_Event.Location = new System.Drawing.Point(488, 71);
+            this.bt_delete_Plan_Event.Name = "bt_delete_Plan_Event";
+            this.bt_delete_Plan_Event.Size = new System.Drawing.Size(151, 85);
+            this.bt_delete_Plan_Event.TabIndex = 1;
+            this.bt_delete_Plan_Event.Text = "Delete";
+            this.bt_delete_Plan_Event.UseVisualStyleBackColor = true;
+            // 
+            // bt_add_Event
+            // 
+            this.bt_add_Event.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bt_add_Event.Location = new System.Drawing.Point(241, 71);
+            this.bt_add_Event.Name = "bt_add_Event";
+            this.bt_add_Event.Size = new System.Drawing.Size(190, 85);
+            this.bt_add_Event.TabIndex = 3;
+            this.bt_add_Event.Text = "Add Event";
+            this.bt_add_Event.UseVisualStyleBackColor = true;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // Form_Main
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(760, 359);
+            this.Controls.Add(this.bt_add_Event);
+            this.Controls.Add(this.bt_delete_Plan_Event);
+            this.Controls.Add(this.bt_add_Plan);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Form_Main";
+            this.Text = "Main";
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button bt_add_Plan;
+        private System.Windows.Forms.Button bt_delete_Plan_Event;
+        private System.Windows.Forms.Button bt_add_Event;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
 
