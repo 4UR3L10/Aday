@@ -14,5 +14,10 @@ namespace Aday_DA
         {
             InitializeComponent();
         }
+
+        private void bt_save_Plan_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
