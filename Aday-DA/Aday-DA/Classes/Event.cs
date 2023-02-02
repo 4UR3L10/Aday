@@ -15,7 +15,6 @@ namespace Aday_DA.Classes
         bool isHighImportance;
         bool isAllDay;
         
-
         // Constructor.
         public Event()
         {
