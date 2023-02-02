@@ -67,6 +67,7 @@ namespace Aday_DA
             this.bt_add_Event.TabIndex = 3;
             this.bt_add_Event.Text = "Add Event";
             this.bt_add_Event.UseVisualStyleBackColor = true;
+            this.bt_add_Event.Click += new System.EventHandler(this.bt_add_Event_Click);
             // 
             // fileSystemWatcher1
             // 

@@ -24,5 +24,11 @@ namespace Aday_DA
         {
 
         }
+
+        private void bt_save_Event_Click(object sender, EventArgs e)
+        {
+            this.Close();
+             
+        }
     }
 }
