@@ -41,6 +41,7 @@ namespace Aday_DA
             this.txtBox_Description = new System.Windows.Forms.TextBox();
             this.chkBox_isHighImportance = new System.Windows.Forms.CheckBox();
             this.chkBox_isAllDay = new System.Windows.Forms.CheckBox();
+            this.bt_save_Event = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBox_Title
@@ -145,11 +146,22 @@ namespace Aday_DA
             this.chkBox_isAllDay.Text = "All Day";
             this.chkBox_isAllDay.UseVisualStyleBackColor = true;
             // 
+            // bt_save_Event
+            // 
+            this.bt_save_Event.Location = new System.Drawing.Point(213, 396);
+            this.bt_save_Event.Name = "bt_save_Event";
+            this.bt_save_Event.Size = new System.Drawing.Size(94, 29);
+            this.bt_save_Event.TabIndex = 10;
+            this.bt_save_Event.Text = "Save Event";
+            this.bt_save_Event.UseVisualStyleBackColor = true;
+            this.bt_save_Event.Click += new System.EventHandler(this.bt_save_Event_Click);
+            // 
             // Form_AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bt_save_Event);
             this.Controls.Add(this.chkBox_isAllDay);
             this.Controls.Add(this.chkBox_isHighImportance);
             this.Controls.Add(this.txtBox_Description);
@@ -163,7 +175,7 @@ namespace Aday_DA
             this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.txtBox_Title);
             this.Name = "Form_AddEvent";
-            this.Text = "Adding";
+            this.Text = "Adding Event(s)";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +195,6 @@ namespace Aday_DA
         private System.Windows.Forms.TextBox txtBox_Description;
         private System.Windows.Forms.CheckBox chkBox_isHighImportance;
         private System.Windows.Forms.CheckBox chkBox_isAllDay;
+        private System.Windows.Forms.Button bt_save_Event;
     }
 }
