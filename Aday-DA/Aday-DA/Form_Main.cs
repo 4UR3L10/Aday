@@ -35,5 +35,10 @@ namespace Aday_DA
             Form_AddEvent form2 = new Form_AddEvent();
             form2.Show();
         }
+
+        private void bt_close_Plan_Event_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
