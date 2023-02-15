@@ -160,7 +160,7 @@ namespace Aday_DA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(884, 491);
             this.Controls.Add(this.bt_save_Event);
             this.Controls.Add(this.chkBox_isAllDay);
             this.Controls.Add(this.chkBox_isHighImportance);

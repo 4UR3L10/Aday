@@ -33,6 +33,7 @@ namespace Aday_DA
             this.bt_delete_Plan_Event = new System.Windows.Forms.Button();
             this.bt_add_Event = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.bt_close_Plan_Event = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,11 +75,23 @@ namespace Aday_DA
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // bt_close_Plan_Event
+            // 
+            this.bt_close_Plan_Event.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bt_close_Plan_Event.Location = new System.Drawing.Point(241, 257);
+            this.bt_close_Plan_Event.Name = "bt_close_Plan_Event";
+            this.bt_close_Plan_Event.Size = new System.Drawing.Size(162, 55);
+            this.bt_close_Plan_Event.TabIndex = 4;
+            this.bt_close_Plan_Event.Text = "Close";
+            this.bt_close_Plan_Event.UseVisualStyleBackColor = true;
+            this.bt_close_Plan_Event.Click += new System.EventHandler(this.bt_close_Plan_Event_Click);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 359);
+            this.ClientSize = new System.Drawing.Size(852, 502);
+            this.Controls.Add(this.bt_close_Plan_Event);
             this.Controls.Add(this.bt_add_Event);
             this.Controls.Add(this.bt_delete_Plan_Event);
             this.Controls.Add(this.bt_add_Plan);
@@ -96,6 +109,7 @@ namespace Aday_DA
         private System.Windows.Forms.Button bt_delete_Plan_Event;
         private System.Windows.Forms.Button bt_add_Event;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Button bt_close_Plan_Event;
     }
 }
 
