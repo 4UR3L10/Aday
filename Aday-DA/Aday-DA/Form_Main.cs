@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aday_DA.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,14 @@ using System.Windows.Forms;
 
 namespace Aday_DA
 {
+   
     public partial class Form_Main : Form
     {
+        
         public Form_Main()
         {
             InitializeComponent();
+            Global.MainCntrllr = new MainController();            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -38,7 +42,9 @@ namespace Aday_DA
 
         private void bt_close_Plan_Event_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Form_Login formLogin = new Form_Login();
+            formLogin.Show();
         }
     }
 }
