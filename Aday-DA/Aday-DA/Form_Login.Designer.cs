@@ -148,6 +148,7 @@ namespace Aday_DA
             this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnSignUp
             // 

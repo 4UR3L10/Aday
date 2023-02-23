@@ -42,9 +42,7 @@ namespace Aday_DA
 
         private void bt_close_Plan_Event_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            Form_Login formLogin = new Form_Login();
-            formLogin.Show();
+            this.Close();
         }
     }
 }
