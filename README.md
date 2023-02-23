@@ -1,4 +1,8 @@
 # Aday
  Backup Event Planner
 
-SQL Server Compact Link:https://www.microsoft.com/en-us/download/details.aspx?id=30709
+LocalDB:
+01 - Right Click on ProjectName "Aday-Da" in Visual Studio
+02 - Manage NuGet Packages
+03 - Click on Browse
+04 - Install "Microsoft.AspNet.Providers.LocalDb"
