@@ -38,5 +38,11 @@ namespace Aday_DA
                 textBoxPassword.PasswordChar = '*';
             }
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Form_Main formLogin = new Form_Main();
+            formLogin.Show();
+        }
     }
 }
