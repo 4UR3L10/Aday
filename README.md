@@ -7,3 +7,6 @@ SQL Server Tools:
 > + 03 - Click on "Add Connection"
 > + 04 - Select "Microsoft SQL Server" or ""Microsoft SQL Server Database File"
 > + 05 - Install and Continue the Steps.
+
+Links:
+> + GetIcons UI:https://www.clipartmax.com/
