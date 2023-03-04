@@ -18,6 +18,8 @@ namespace Aday_DA
 
         private void bt_save_Plan_Click(object sender, EventArgs e)
         {
+            Form_Plans_LVws form2 = new Form_Plans_LVws();
+            form2.Show();
             this.Close();
         }
     }
