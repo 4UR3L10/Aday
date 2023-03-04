@@ -13,5 +13,8 @@ CREATE TABLE [dbo].[Customer]
     [First Name] VARCHAR(50) NOT NULL, 
     [LastName] VARCHAR(50) NOT NULL, 
     [EmailAddress] VARCHAR(50) NOT NULL, 
-    [Password] NCHAR(10) NOT NULL
+    [Password] VARCHAR(50) NOT NULL
 )
+
+INSERT INTO [dbo].[Customer] ([CustomerID], [First Name], [LastName], [EmailAddress], [Password]) VALUES (N'1', N'123', N'123', N'123', N'123')
+
