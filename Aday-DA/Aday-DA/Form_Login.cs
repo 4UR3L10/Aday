@@ -82,6 +82,8 @@ namespace Aday_DA
                 MessageBox.Show("Login Successfully");
                 Form_Main formLogin = new Form_Main();
                 formLogin.Show();
+                this.Enabled = false;
+                
             }
             else
             {
