@@ -43,6 +43,14 @@ namespace Aday_DA
         private void bt_close_Plan_Event_Click(object sender, EventArgs e)
         {
             this.Close();
+            Form_Login form2 = new Form_Login();
+            form2.Show();
+
+        }
+
+        private void Form_Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
