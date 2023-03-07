@@ -6,6 +6,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -16,6 +17,10 @@ namespace Aday_DA
         public Form_Login()
         {
             InitializeComponent();
+            string fileName = "AdayDB.mdf";
+            string path = Path.GetFullPath(fileName);
+            path = path.Replace(@"bin\Debug\netcoreapp3.1\", "");            
+            Global.connectionVar = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True");          
         }
 
         private void Form_Login_Load(object sender, EventArgs e)
@@ -89,6 +94,11 @@ namespace Aday_DA
             {
                 MessageBox.Show("Username/Password is incorrect.");
             }
+        }
+
+        private void labelSignOut_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
