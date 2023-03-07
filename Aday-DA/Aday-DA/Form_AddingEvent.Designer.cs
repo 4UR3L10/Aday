@@ -44,6 +44,7 @@ namespace Aday_DA
             this.bt_save_Event = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHeader = new System.Windows.Forms.Label();
+            this.bt_close_Plan_Event = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,11 +195,24 @@ namespace Aday_DA
             this.labelHeader.TabIndex = 5;
             this.labelHeader.Text = "ADAY.....";
             // 
+            // bt_close_Plan_Event
+            // 
+            this.bt_close_Plan_Event.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
+            this.bt_close_Plan_Event.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_close_Plan_Event.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bt_close_Plan_Event.Location = new System.Drawing.Point(650, 493);
+            this.bt_close_Plan_Event.Name = "bt_close_Plan_Event";
+            this.bt_close_Plan_Event.Size = new System.Drawing.Size(239, 48);
+            this.bt_close_Plan_Event.TabIndex = 13;
+            this.bt_close_Plan_Event.Text = "Close";
+            this.bt_close_Plan_Event.UseVisualStyleBackColor = false;
+            // 
             // Form_AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 588);
+            this.Controls.Add(this.bt_close_Plan_Event);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bt_save_Event);
             this.Controls.Add(this.chkBox_isAllDay);
@@ -239,5 +253,6 @@ namespace Aday_DA
         private System.Windows.Forms.Button bt_save_Event;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelHeader;
+        private System.Windows.Forms.Button bt_close_Plan_Event;
     }
 }

@@ -22,5 +22,17 @@ namespace Aday_DA
             form2.Show();
             this.Close();
         }
+
+        private void Form_AddPlan_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_close_Plan_Event_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form_Main form2 = new Form_Main();
+            form2.Show();
+        }
     }
 }
