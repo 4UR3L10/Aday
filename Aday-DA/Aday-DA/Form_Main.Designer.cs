@@ -124,6 +124,7 @@ namespace Aday_DA
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Form_Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
