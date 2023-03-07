@@ -183,6 +183,7 @@ namespace Aday_DA
             this.labelSignOut.Size = new System.Drawing.Size(53, 15);
             this.labelSignOut.TabIndex = 6;
             this.labelSignOut.Text = "Sign Out";
+            this.labelSignOut.Click += new System.EventHandler(this.labelSignOut_Click);
             // 
             // Form_Login
             // 
