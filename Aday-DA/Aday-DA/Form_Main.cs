@@ -29,34 +29,52 @@ namespace Aday_DA
         private void bt_add_Plan_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Hello World!","Message", MessageBoxButtons.OK,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1,MessageBoxOptions.DefaultDesktopOnly,false);
-            Form_AddPlan form2 = new Form_AddPlan();
-            form2.Show();
+            Form_AddPlan AddPlan = new Form_AddPlan();
+            this.Enabled = false;
+            AddPlan.Show();
+            Global.flagMain = true;
         }
 
         private void bt_add_Event_Click(object sender, EventArgs e)
         {
             
             //this.Close();
-            Form_AddEvent form2 = new Form_AddEvent();
-            form2.TopLevel = false;
-            
+            Form_AddEvent AddEvent = new Form_AddEvent();
+            //this.TopLevel = false;
             this.Enabled = false;
-            form2.Show();
+            AddEvent.Show();
+
+            //
+
 
             //this.Close();
-            
-    
-            
-            
+
+
+
+
 
 
         }
 
         private void bt_close_Plan_Event_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form_Login form2 = new Form_Login();
-            form2.Show();
+            //this.Close();
+            //Form_Login form2 = new Form_Login();
+            //form2.BringToFront();
+            //form2.Show();
+
+            if (Global.flagLogin)
+            {
+                this.Close();
+                Form_Login form2 = new Form_Login();
+                //form2.BringToFront();
+                form2.Show();
+            }
+            else
+            {
+                this.Enabled = true;
+            }
+
 
         }
 

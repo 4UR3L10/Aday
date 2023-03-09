@@ -30,9 +30,21 @@ namespace Aday_DA
 
         private void bt_close_Plan_Event_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form_Main form2 = new Form_Main();
-            form2.Show();
+            //this.Close();
+            //Form_Main form2 = new Form_Main();
+            //form2.Show();
+
+            if (Global.flagMain)
+            {
+                this.Close();
+                Form_Main formMain = new Form_Main();
+                //form2.BringToFront();
+                formMain.Show();
+            }
+            else
+            {
+                this.Enabled = true;
+            }
         }
     }
 }
