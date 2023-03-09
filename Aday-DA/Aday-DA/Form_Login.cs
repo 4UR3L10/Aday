@@ -85,8 +85,9 @@ namespace Aday_DA
             if (email == textBoxUsername.Text && password == textBoxPassword.Text)
             {
                 MessageBox.Show("Login Successfully");
-                Form_Main formLogin = new Form_Main();
-                formLogin.Show();
+                Form_Main newMain = new Form_Main();
+                newMain.Show();
+                Global.flagLogin = true;
                 this.Enabled = false;
                 
             }

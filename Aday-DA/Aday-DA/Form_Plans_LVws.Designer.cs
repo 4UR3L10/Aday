@@ -32,6 +32,7 @@ namespace Aday_DA
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHeader = new System.Windows.Forms.Label();
+            this.bt_close_List_Plan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,11 +64,24 @@ namespace Aday_DA
             this.labelHeader.TabIndex = 5;
             this.labelHeader.Text = "ADAY.....";
             // 
+            // bt_close_List_Plan
+            // 
+            this.bt_close_List_Plan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
+            this.bt_close_List_Plan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_close_List_Plan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bt_close_List_Plan.Location = new System.Drawing.Point(520, 361);
+            this.bt_close_List_Plan.Name = "bt_close_List_Plan";
+            this.bt_close_List_Plan.Size = new System.Drawing.Size(239, 48);
+            this.bt_close_List_Plan.TabIndex = 7;
+            this.bt_close_List_Plan.Text = "Close";
+            this.bt_close_List_Plan.UseVisualStyleBackColor = false;
+            // 
             // Form_Plans_LVws
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bt_close_List_Plan);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.vScrollBar1);
             this.Name = "Form_Plans_LVws";
@@ -84,5 +98,6 @@ namespace Aday_DA
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelHeader;
+        private System.Windows.Forms.Button bt_close_List_Plan;
     }
 }
