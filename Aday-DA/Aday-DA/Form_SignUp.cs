@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using Aday_DA.Classes;
 namespace Aday_DA.Resources
 {
     public partial class Form_SignUp : Form
@@ -127,7 +127,18 @@ namespace Aday_DA.Resources
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            if (Global.flagLogin)
+            {
+                this.Close();
+                Form_Login formLogin = new Form_Login();
+                //form2.BringToFront();
+                formLogin.Show();
+            }
+            else
+            {
+                this.Enabled = true;
+            }
         }
     }
 }

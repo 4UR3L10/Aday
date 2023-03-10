@@ -21,7 +21,8 @@ namespace Aday_DA
             string fileName = "AdayDB.mdf";
             string path = Path.GetFullPath(fileName);
             path = path.Replace(@"bin\Debug\netcoreapp3.1\", "");            
-            Global.connectionVar = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True");          
+            Global.connectionVar = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True");
+            Global.flagLogin = true;
         }
 
         private void Form_Login_Load(object sender, EventArgs e)
