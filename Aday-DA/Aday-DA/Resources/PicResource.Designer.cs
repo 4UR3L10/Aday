@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Aday_DA {
+namespace Aday_DA.Resources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Aday_DA {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource1 {
+    internal class PicResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resource1() {
+        internal PicResource() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Aday_DA {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Aday_DA.Resource1", typeof(Resource1).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Aday_DA.Resources.PicResource", typeof(PicResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -66,6 +66,26 @@ namespace Aday_DA {
         internal static System.Drawing.Bitmap clipart162850 {
             get {
                 object obj = ResourceManager.GetObject("clipart162850", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clipart684108 {
+            get {
+                object obj = ResourceManager.GetObject("clipart684108", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clipart836353 {
+            get {
+                object obj = ResourceManager.GetObject("clipart836353", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
