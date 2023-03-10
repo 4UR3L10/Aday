@@ -1,4 +1,5 @@
 ﻿using Aday_DA.Classes;
+using Aday_DA.Resources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -100,6 +101,30 @@ namespace Aday_DA
         private void labelSignOut_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            Form_SignUp formSignUp = new Form_SignUp();    
+            formSignUp.Show();
+            this.Enabled = false;
+        }
+
+        private void textBoxPassword_Leave(object sender, EventArgs e)
+        {
+            if (textBoxPassword.Text == "")
+            {
+                textBoxPassword.Text = "Type Your Password";
+                textBoxPassword.PasswordChar = '\0';
+            }
+        }
+
+        private void textBoxUsername_Leave(object sender, EventArgs e)
+        {
+            if (textBoxUsername.Text == "")
+            {
+                textBoxUsername.Text = "Type Your Username";
+            }
         }
     }
 }
