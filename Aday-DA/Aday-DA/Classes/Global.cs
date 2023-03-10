@@ -10,5 +10,7 @@ namespace Aday_DA.Classes
     {
         public static MainController MainCntrllr;
         public static SqlConnection connectionVar;
+        public static bool flagLogin;
+        public static bool flagMain;
     }
 }

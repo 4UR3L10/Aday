@@ -32,7 +32,7 @@ namespace Aday_DA
             this.bt_add_Plan = new System.Windows.Forms.Button();
             this.bt_delete_Plan_Event = new System.Windows.Forms.Button();
             this.bt_add_Event = new System.Windows.Forms.Button();
-            this.bt_close_Plan_Event = new System.Windows.Forms.Button();
+            this.bt_close_Main = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHeader = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -77,18 +77,18 @@ namespace Aday_DA
             this.bt_add_Event.UseVisualStyleBackColor = false;
             this.bt_add_Event.Click += new System.EventHandler(this.bt_add_Event_Click);
             // 
-            // bt_close_Plan_Event
+            // bt_close_Main
             // 
-            this.bt_close_Plan_Event.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
-            this.bt_close_Plan_Event.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_close_Plan_Event.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_close_Plan_Event.Location = new System.Drawing.Point(283, 369);
-            this.bt_close_Plan_Event.Name = "bt_close_Plan_Event";
-            this.bt_close_Plan_Event.Size = new System.Drawing.Size(239, 48);
-            this.bt_close_Plan_Event.TabIndex = 4;
-            this.bt_close_Plan_Event.Text = "Close";
-            this.bt_close_Plan_Event.UseVisualStyleBackColor = false;
-            this.bt_close_Plan_Event.Click += new System.EventHandler(this.bt_close_Plan_Event_Click);
+            this.bt_close_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
+            this.bt_close_Main.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_close_Main.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bt_close_Main.Location = new System.Drawing.Point(283, 369);
+            this.bt_close_Main.Name = "bt_close_Main";
+            this.bt_close_Main.Size = new System.Drawing.Size(239, 48);
+            this.bt_close_Main.TabIndex = 4;
+            this.bt_close_Main.Text = "Close";
+            this.bt_close_Main.UseVisualStyleBackColor = false;
+            this.bt_close_Main.Click += new System.EventHandler(this.bt_close_Plan_Event_Click);
             // 
             // panel1
             // 
@@ -117,7 +117,7 @@ namespace Aday_DA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 501);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.bt_close_Plan_Event);
+            this.Controls.Add(this.bt_close_Main);
             this.Controls.Add(this.bt_add_Event);
             this.Controls.Add(this.bt_delete_Plan_Event);
             this.Controls.Add(this.bt_add_Plan);
@@ -136,7 +136,7 @@ namespace Aday_DA
         private System.Windows.Forms.Button bt_add_Plan;
         private System.Windows.Forms.Button bt_delete_Plan_Event;
         private System.Windows.Forms.Button bt_add_Event;
-        private System.Windows.Forms.Button bt_close_Plan_Event;
+        private System.Windows.Forms.Button bt_close_Main;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelHeader;
     }
