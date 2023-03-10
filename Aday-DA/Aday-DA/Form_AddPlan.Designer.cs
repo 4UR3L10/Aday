@@ -34,6 +34,7 @@ namespace Aday_DA
             this.txtBox_Title = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHeader = new System.Windows.Forms.Label();
+            this.bt_close_Add_Plan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@ namespace Aday_DA
             this.bt_save_Plan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_Plan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_save_Plan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_save_Plan.Location = new System.Drawing.Point(231, 362);
+            this.bt_save_Plan.Location = new System.Drawing.Point(34, 355);
             this.bt_save_Plan.Name = "bt_save_Plan";
             this.bt_save_Plan.Size = new System.Drawing.Size(239, 48);
             this.bt_save_Plan.TabIndex = 0;
@@ -91,17 +92,32 @@ namespace Aday_DA
             this.labelHeader.TabIndex = 5;
             this.labelHeader.Text = "ADAY.....";
             // 
+            // bt_close_Add_Plan
+            // 
+            this.bt_close_Add_Plan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
+            this.bt_close_Add_Plan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_close_Add_Plan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bt_close_Add_Plan.Location = new System.Drawing.Point(501, 355);
+            this.bt_close_Add_Plan.Name = "bt_close_Add_Plan";
+            this.bt_close_Add_Plan.Size = new System.Drawing.Size(239, 48);
+            this.bt_close_Add_Plan.TabIndex = 6;
+            this.bt_close_Add_Plan.Text = "Close";
+            this.bt_close_Add_Plan.UseVisualStyleBackColor = false;
+            this.bt_close_Add_Plan.Click += new System.EventHandler(this.bt_close_Plan_Event_Click);
+            // 
             // Form_AddPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bt_close_Add_Plan);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.txtBox_Title);
             this.Controls.Add(this.bt_save_Plan);
             this.Name = "Form_AddPlan";
             this.Text = "Add Plan";
+            this.Load += new System.EventHandler(this.Form_AddPlan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -116,5 +132,6 @@ namespace Aday_DA
         private System.Windows.Forms.TextBox txtBox_Title;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelHeader;
+        private System.Windows.Forms.Button bt_close_Add_Plan;
     }
 }
