@@ -59,6 +59,7 @@ namespace Aday_DA
             this.textBoxUsername.Size = new System.Drawing.Size(229, 18);
             this.textBoxUsername.TabIndex = 2;
             this.textBoxUsername.Click += new System.EventHandler(this.textBoxUsername_Click);
+            this.textBoxUsername.Leave += new System.EventHandler(this.textBoxUsername_Leave);
             // 
             // panel1
             // 
@@ -134,6 +135,7 @@ namespace Aday_DA
             this.textBoxPassword.Size = new System.Drawing.Size(229, 18);
             this.textBoxPassword.TabIndex = 3;
             this.textBoxPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPassword_MouseClick);
+            this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
             // btnLogin
             // 
@@ -163,6 +165,7 @@ namespace Aday_DA
             this.btnSignUp.TabIndex = 4;
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // lblForgotPassword
             // 
