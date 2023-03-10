@@ -18,7 +18,8 @@ namespace Aday_DA
         public Form_Main()
         {
             InitializeComponent();
-            Global.MainCntrllr = new MainController();            
+            Global.MainCntrllr = new MainController();
+            Global.flagMain = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,6 +70,8 @@ namespace Aday_DA
                 Form_Login form2 = new Form_Login();
                 //form2.BringToFront();
                 form2.Show();
+                
+
             }
             else
             {
