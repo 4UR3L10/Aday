@@ -173,9 +173,10 @@ namespace Aday_DA
             this.lblForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblForgotPassword.Location = new System.Drawing.Point(103, 272);
             this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(149, 15);
+            this.lblForgotPassword.Size = new System.Drawing.Size(103, 15);
             this.lblForgotPassword.TabIndex = 5;
-            this.lblForgotPassword.Text = "Forgot/Change Password ?";
+            this.lblForgotPassword.Text = "Forgot Password ?";
+            this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
             // 
             // labelExit
             // 

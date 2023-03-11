@@ -22,7 +22,7 @@ namespace Aday_DA
             string fileName = "AdayDB.mdf";
             string path = Path.GetFullPath(fileName);
             path = path.Replace(@"bin\Debug\netcoreapp3.1\", "");            
-            Global.connectionVar = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True");          
+            Global.connectionVar = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True");
         }
 
         private void Form_Login_Load(object sender, EventArgs e)
@@ -95,12 +95,17 @@ namespace Aday_DA
                 SqlDataAdapter dataAdapterVar = new SqlDataAdapter(commandVar);
                 DataTable dataTableVar = new DataTable();
                 dataAdapterVar.Fill(dataTableVar);
-                password = dataTableVar.Rows[0]["Password"].ToString();
+                if (dataTableVar.Rows.Count == 0)
+                {
+                    MessageBox.Show("Password is incorrect.");
+                }
+                else
+                {
+                    password = dataTableVar.Rows[0]["Password"].ToString();
+                }                    
             }
 
             Global.connectionVar.Close();
-
-
 
             if (email == textBoxEmail.Text && password == hash /*textBoxPassword.Text*/)
             {
@@ -109,7 +114,6 @@ namespace Aday_DA
                 newMain.Show();
                 Global.flagLogin = true;
                 this.Enabled = false;
-                
             }
             else
             {
@@ -119,7 +123,7 @@ namespace Aday_DA
 
         private void labelSignOut_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
@@ -144,6 +148,13 @@ namespace Aday_DA
             {
                 textBoxEmail.Text = "Type Your Email";
             }
+        }
+
+        private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+            Form_Change_Password formChangePassword = new Form_Change_Password();
+            formChangePassword.Show();
+            this.Enabled = false;
         }
     }
 }
