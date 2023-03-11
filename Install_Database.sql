@@ -7,14 +7,15 @@
         05 - Install and Continue the Steps.
 */
 
-CREATE TABLE [dbo].[Customer]
-(
-	[CustomerID] VARCHAR(10) NOT NULL PRIMARY KEY, 
-    [First Name] VARCHAR(50) NOT NULL, 
-    [LastName] VARCHAR(50) NOT NULL, 
-    [EmailAddress] VARCHAR(50) NOT NULL, 
-    [Password] VARCHAR(50) NOT NULL
-)
+CREATE TABLE [dbo].[Customer] (
+    [CustomerID]   VARCHAR (10)  NOT NULL,
+    [FirstName]   VARCHAR (50)  NOT NULL,
+    [LastName]     VARCHAR (50)  NOT NULL,
+    [EmailAddress] VARCHAR (50)  NOT NULL,
+    [Password]     VARCHAR (256) NOT NULL,
+    PRIMARY KEY CLUSTERED ([CustomerID] ASC)
+);
+
 
 INSERT INTO [dbo].[Customer] ([CustomerID], [First Name], [LastName], [EmailAddress], [Password]) VALUES (N'1', N'123', N'123', N'123', N'123')
 

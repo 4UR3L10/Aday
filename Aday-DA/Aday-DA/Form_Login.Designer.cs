@@ -41,7 +41,7 @@ namespace Aday_DA
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.lblForgotPassword = new System.Windows.Forms.Label();
-            this.labelSignOut = new System.Windows.Forms.Label();
+            this.labelExit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUsername)).BeginInit();
             this.panelUsername.SuspendLayout();
@@ -173,27 +173,27 @@ namespace Aday_DA
             this.lblForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblForgotPassword.Location = new System.Drawing.Point(103, 272);
             this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(103, 15);
+            this.lblForgotPassword.Size = new System.Drawing.Size(149, 15);
             this.lblForgotPassword.TabIndex = 5;
-            this.lblForgotPassword.Text = "Forgot Password ?";
+            this.lblForgotPassword.Text = "Forgot/Change Password ?";
             // 
-            // labelSignOut
+            // labelExit
             // 
-            this.labelSignOut.AutoSize = true;
-            this.labelSignOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelSignOut.Location = new System.Drawing.Point(342, 272);
-            this.labelSignOut.Name = "labelSignOut";
-            this.labelSignOut.Size = new System.Drawing.Size(53, 15);
-            this.labelSignOut.TabIndex = 6;
-            this.labelSignOut.Text = "Sign Out";
-            this.labelSignOut.Click += new System.EventHandler(this.labelSignOut_Click);
+            this.labelExit.AutoSize = true;
+            this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelExit.Location = new System.Drawing.Point(342, 272);
+            this.labelExit.Name = "labelExit";
+            this.labelExit.Size = new System.Drawing.Size(26, 15);
+            this.labelExit.TabIndex = 6;
+            this.labelExit.Text = "Exit";
+            this.labelExit.Click += new System.EventHandler(this.labelSignOut_Click);
             // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 450);
-            this.Controls.Add(this.labelSignOut);
+            this.Controls.Add(this.labelExit);
             this.Controls.Add(this.lblForgotPassword);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogin);
@@ -229,6 +229,6 @@ namespace Aday_DA
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Label lblForgotPassword;
-        private System.Windows.Forms.Label labelSignOut;
+        private System.Windows.Forms.Label labelExit;
     }
 }

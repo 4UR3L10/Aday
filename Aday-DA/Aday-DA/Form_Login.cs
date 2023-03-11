@@ -15,6 +15,7 @@ namespace Aday_DA
 {
     public partial class Form_Login : Form
     {
+        String hash;
         public Form_Login()
         {
             InitializeComponent();
@@ -71,7 +72,15 @@ namespace Aday_DA
 
             if (textBoxPassword.Text != "Type Your Password" && textBoxPassword.Text != "")
             {
-                commandVar.CommandText = "SELECT Password FROM Customer WHERE Password = '" + textBoxPassword.Text + "'";
+                //MessageBox.Show(textBoxPassword.Text);
+                byte[] data = System.Text.Encoding.ASCII.GetBytes(textBoxPassword.Text);
+                data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+                hash = System.Text.Encoding.ASCII.GetString(data);
+                //MessageBox.Show(hash);
+                commandVar.CommandText = "SELECT Password FROM Customer WHERE Password = '" + hash + "' AND EmailAddress = '" + textBoxUsername.Text + "'";
+
+
+                //commandVar.CommandText = "SELECT Password FROM Customer WHERE Password = '" + textBoxPassword.Text + "'";
                 commandVar.ExecuteNonQuery();
                 SqlDataAdapter dataAdapterVar = new SqlDataAdapter(commandVar);
                 DataTable dataTableVar = new DataTable();
@@ -83,7 +92,7 @@ namespace Aday_DA
 
 
 
-            if (email == textBoxUsername.Text && password == textBoxPassword.Text)
+            if (email == textBoxUsername.Text && password == hash /*textBoxPassword.Text*/)
             {
                 MessageBox.Show("Login Successfully");
                 Form_Main newMain = new Form_Main();
