@@ -51,13 +51,14 @@ namespace Aday_DA
             // 
             // textBoxEmail
             // 
+
             this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxEmail.Location = new System.Drawing.Point(49, 11);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(229, 18);
-            this.textBoxEmail.TabIndex = 2;
+            this.textBoxEmail.TabIndex = 1;
             this.textBoxEmail.Click += new System.EventHandler(this.textBoxUsername_Click);
             this.textBoxEmail.Leave += new System.EventHandler(this.textBoxUsername_Leave);
             // 
@@ -66,8 +67,9 @@ namespace Aday_DA
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
             this.panel1.Controls.Add(this.labelHeader);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(489, 74);
+            this.panel1.Size = new System.Drawing.Size(559, 99);
             this.panel1.TabIndex = 4;
             // 
             // labelHeader
@@ -75,9 +77,9 @@ namespace Aday_DA
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelHeader.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelHeader.Location = new System.Drawing.Point(128, 18);
+            this.labelHeader.Location = new System.Drawing.Point(146, 24);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(252, 37);
+            this.labelHeader.Size = new System.Drawing.Size(316, 46);
             this.labelHeader.TabIndex = 5;
             this.labelHeader.Text = "ADAY USER LOGIN";
             // 
@@ -107,9 +109,10 @@ namespace Aday_DA
             // 
             this.panelPassword.Controls.Add(this.PictureBoxPassword);
             this.panelPassword.Controls.Add(this.textBoxPassword);
-            this.panelPassword.Location = new System.Drawing.Point(103, 217);
+            this.panelPassword.Location = new System.Drawing.Point(118, 289);
+            this.panelPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelPassword.Name = "panelPassword";
-            this.panelPassword.Size = new System.Drawing.Size(292, 38);
+            this.panelPassword.Size = new System.Drawing.Size(334, 51);
             this.panelPassword.TabIndex = 7;
             // 
             // PictureBoxPassword
@@ -119,8 +122,9 @@ namespace Aday_DA
             this.PictureBoxPassword.Cursor = System.Windows.Forms.Cursors.Default;
             this.PictureBoxPassword.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxPassword.Image")));
             this.PictureBoxPassword.Location = new System.Drawing.Point(0, 0);
+            this.PictureBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PictureBoxPassword.Name = "PictureBoxPassword";
-            this.PictureBoxPassword.Size = new System.Drawing.Size(34, 38);
+            this.PictureBoxPassword.Size = new System.Drawing.Size(39, 51);
             this.PictureBoxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBoxPassword.TabIndex = 5;
             this.PictureBoxPassword.TabStop = false;
@@ -130,10 +134,11 @@ namespace Aday_DA
             this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPassword.Location = new System.Drawing.Point(49, 11);
+            this.textBoxPassword.Location = new System.Drawing.Point(56, 15);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(229, 18);
-            this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.Size = new System.Drawing.Size(262, 22);
+            this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPassword_MouseClick);
             this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
@@ -144,10 +149,11 @@ namespace Aday_DA
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(152, 306);
+            this.btnLogin.Location = new System.Drawing.Point(174, 408);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(209, 36);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.Size = new System.Drawing.Size(239, 48);
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -159,9 +165,10 @@ namespace Aday_DA
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSignUp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSignUp.Location = new System.Drawing.Point(152, 357);
+            this.btnSignUp.Location = new System.Drawing.Point(174, 476);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(209, 36);
+            this.btnSignUp.Size = new System.Drawing.Size(239, 48);
             this.btnSignUp.TabIndex = 4;
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.UseVisualStyleBackColor = false;
@@ -171,9 +178,9 @@ namespace Aday_DA
             // 
             this.lblForgotPassword.AutoSize = true;
             this.lblForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblForgotPassword.Location = new System.Drawing.Point(103, 272);
+            this.lblForgotPassword.Location = new System.Drawing.Point(118, 363);
             this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(103, 15);
+            this.lblForgotPassword.Size = new System.Drawing.Size(129, 20);
             this.lblForgotPassword.TabIndex = 5;
             this.lblForgotPassword.Text = "Forgot Password ?";
             this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
@@ -191,7 +198,7 @@ namespace Aday_DA
             // 
             // Form_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 450);
             this.Controls.Add(this.labelExit);
@@ -202,6 +209,7 @@ namespace Aday_DA
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_Login";
             this.Text = "Aday Login";
             this.Load += new System.EventHandler(this.Form_Login_Load);
