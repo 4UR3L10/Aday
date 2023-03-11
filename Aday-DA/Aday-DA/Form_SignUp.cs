@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Aday_DA.Classes;
+using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Aday_DA.Resources
@@ -122,7 +125,77 @@ namespace Aday_DA.Resources
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
+            if (textBoxFirstName.Text == "Type Your First Name" || textBoxFirstName.Text == "")
+            {
+                MessageBox.Show("First Name cannot be blank.");
+            }
+            else if (textBoxLastName.Text == "Type Your Last Name" || textBoxLastName.Text == "")
+            {
+                MessageBox.Show("Last Name cannot be blank.");
+            }
+            else if (!textBoxEmail.Text.Contains("@") || !textBoxEmail.Text.Contains("."))
+            {
+                MessageBox.Show("Enter a valid email address.");
+            }
+            else if (textBoxEmail.Text != textBoxEmailVerify.Text)
+            {
+                MessageBox.Show("Emails need to be the same.");
+            }
+            else if (textBoxEmail.Text == "Type Your Email" || textBoxEmail.Text == "")
+            {
+                MessageBox.Show("Email cannot be blank.");
+            }
+            else if (textBoxPassword.Text == "Type Your Password" || textBoxPassword.Text == "")
+            {
+                MessageBox.Show("Password cannot be blank.");
+            }
+            else if (textBoxPassword.Text != textBoxPasswordVerify.Text)
+            {
+                MessageBox.Show("Passwords need to be the same.");
+            }
+            else if (textBoxPassword.Text.Length < 10)
+            {
+                MessageBox.Show("Password Length need to be greater or equal to 10 characters.");
+            }
+            else
+            {
+                Global.connectionVar.Open();
+                SqlCommand commandVar = Global.connectionVar.CreateCommand();
+                commandVar.CommandType = CommandType.Text;
+                commandVar.CommandText = "SELECT EmailAddress FROM Customer WHERE EmailAddress = '" + textBoxEmail.Text + "'";
+                commandVar.ExecuteNonQuery();
+                SqlDataAdapter dataAdapterVar = new SqlDataAdapter(commandVar);
+                DataTable dataTableVar = new DataTable();
+                dataAdapterVar.Fill(dataTableVar);
+                if(dataTableVar.Rows.Count == 0)
+                {
+                    commandVar = Global.connectionVar.CreateCommand();
+                    commandVar.CommandType = CommandType.Text;
+                    commandVar.CommandText = "SELECT MAX(CustomerID) FROM Customer";
+                    commandVar.ExecuteNonQuery();
+                    dataAdapterVar = new SqlDataAdapter(commandVar);
+                    dataTableVar = new DataTable();
+                    dataAdapterVar.Fill(dataTableVar);
+                    string CustomerID = dataTableVar.Rows[0][0].ToString();
+                    int CustID = Int16.Parse(CustomerID) + 1;
+                    CustomerID = CustID.ToString();
 
+                    byte[] data = System.Text.Encoding.ASCII.GetBytes(textBoxPassword.Text);
+                    data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+                    String hash = System.Text.Encoding.ASCII.GetString(data);
+
+                    commandVar.CommandText = "INSERT into Customer values('"+CustomerID+ "','"+textBoxFirstName.Text+"','"+textBoxLastName.Text+ "','"+ textBoxEmail.Text+"','"+hash+ "')";
+                    commandVar.ExecuteNonQuery();
+                    MessageBox.Show("User Created Successfully.");
+                    Global.connectionVar.Close();
+                    this.Close();
+                }
+                else
+                {
+                    string email = dataTableVar.Rows[0]["EmailAddress"].ToString();
+                    MessageBox.Show("you already have an account associated with this email address.");
+                }
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
