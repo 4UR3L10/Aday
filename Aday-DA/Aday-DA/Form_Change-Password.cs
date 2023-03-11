@@ -17,7 +17,8 @@ namespace Aday_DA
 
         private void Form_Change_Password_Load(object sender, EventArgs e)
         {
-
+            textBoxEmail.Text = "Type Your Email";
+            textBoxEmailVerify.Text = "Verify Your Email";
         }
 
         private void buttonSendPassword_Click(object sender, EventArgs e)

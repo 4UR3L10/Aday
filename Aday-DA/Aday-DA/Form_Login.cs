@@ -28,15 +28,15 @@ namespace Aday_DA
         private void Form_Login_Load(object sender, EventArgs e)
         {
             textBoxPassword.Text = "Type Your Password";
-            textBoxUsername.Text = "Type Your Username";
+            textBoxEmail.Text = "Type Your Email";
         }
 
         private void textBoxUsername_Click(object sender, EventArgs e)
         {
 
-            if (textBoxUsername.Text == "Type Your Username")
+            if (textBoxEmail.Text == "Type Your Email")
             {
-                textBoxUsername.Text = "";
+                textBoxEmail.Text = "";
             }
         }
 
@@ -58,11 +58,21 @@ namespace Aday_DA
             // SELECT. 
             SqlCommand commandVar = Global.connectionVar.CreateCommand();
             commandVar.CommandType = CommandType.Text;
-            
 
-            if (textBoxUsername.Text != "Type Your Username" && textBoxUsername.Text != "")
+            if (textBoxEmail.Text == "Type Your Email" && textBoxEmail.Text == "")
             {
-                commandVar.CommandText = "SELECT EmailAddress FROM Customer WHERE EmailAddress = '" + textBoxUsername.Text + "'";
+                MessageBox.Show("Email cannot be blank.");
+            }
+
+
+            if (textBoxPassword.Text == "Type Your Password" && textBoxPassword.Text == "")
+            {
+                MessageBox.Show("Password cannot be blank.");
+            }
+
+            if (textBoxEmail.Text != "Type Your Email" && textBoxEmail.Text != "")
+            {
+                commandVar.CommandText = "SELECT EmailAddress FROM Customer WHERE EmailAddress = '" + textBoxEmail.Text + "'";
                 commandVar.ExecuteNonQuery();                
                 SqlDataAdapter dataAdapterVar = new SqlDataAdapter(commandVar);
                 DataTable dataTableVar = new DataTable();
@@ -77,7 +87,7 @@ namespace Aday_DA
                 data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
                 hash = System.Text.Encoding.ASCII.GetString(data);
                 //MessageBox.Show(hash);
-                commandVar.CommandText = "SELECT Password FROM Customer WHERE Password = '" + hash + "' AND EmailAddress = '" + textBoxUsername.Text + "'";
+                commandVar.CommandText = "SELECT Password FROM Customer WHERE Password = '" + hash + "' AND EmailAddress = '" + textBoxEmail.Text + "'";
 
 
                 //commandVar.CommandText = "SELECT Password FROM Customer WHERE Password = '" + textBoxPassword.Text + "'";
@@ -92,7 +102,7 @@ namespace Aday_DA
 
 
 
-            if (email == textBoxUsername.Text && password == hash /*textBoxPassword.Text*/)
+            if (email == textBoxEmail.Text && password == hash /*textBoxPassword.Text*/)
             {
                 MessageBox.Show("Login Successfully");
                 Form_Main newMain = new Form_Main();
@@ -103,7 +113,7 @@ namespace Aday_DA
             }
             else
             {
-                MessageBox.Show("Username/Password is incorrect.");
+                MessageBox.Show("Email/Password is incorrect.");
             }
         }
 
@@ -130,9 +140,9 @@ namespace Aday_DA
 
         private void textBoxUsername_Leave(object sender, EventArgs e)
         {
-            if (textBoxUsername.Text == "")
+            if (textBoxEmail.Text == "")
             {
-                textBoxUsername.Text = "Type Your Username";
+                textBoxEmail.Text = "Type Your Email";
             }
         }
     }
