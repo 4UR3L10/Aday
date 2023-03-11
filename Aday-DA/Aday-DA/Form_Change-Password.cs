@@ -22,7 +22,22 @@ namespace Aday_DA
 
         private void buttonSendPassword_Click(object sender, EventArgs e)
         {
-
+            if (!textBoxEmail.Text.Contains("@") || !textBoxEmail.Text.Contains("."))
+            {
+                MessageBox.Show("Enter a valid email address.");
+            }
+            else if (textBoxEmail.Text != textBoxEmailVerify.Text)
+            {
+                MessageBox.Show("Emails need to be the same.");
+            }
+            else if (textBoxEmail.Text == "Type Your Email" || textBoxEmail.Text == "")
+            {
+                MessageBox.Show("Email cannot be blank.");
+            }
+            else
+            {
+                // Reset Password.
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
