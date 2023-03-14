@@ -159,6 +159,7 @@ namespace Aday_DA.Resources
             this.textBoxPassword.Size = new System.Drawing.Size(262, 22);
             this.textBoxPassword.TabIndex = 5;
             this.textBoxPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPassword_MouseClick);
+            this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
             this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
             // btnClose
@@ -247,6 +248,7 @@ namespace Aday_DA.Resources
             this.textBoxPasswordVerify.Size = new System.Drawing.Size(262, 22);
             this.textBoxPasswordVerify.TabIndex = 6;
             this.textBoxPasswordVerify.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPasswordVerify_MouseClick);
+            this.textBoxPasswordVerify.Enter += new System.EventHandler(this.textBoxPasswordVerify_Enter);
             this.textBoxPasswordVerify.Leave += new System.EventHandler(this.textBoxPasswordVerify_Leave);
             // 
             // panelEmailVerify
