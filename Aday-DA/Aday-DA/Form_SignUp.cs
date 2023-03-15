@@ -213,6 +213,24 @@ namespace Aday_DA.Resources
                 this.Enabled = true;
             }
         }
+
+        private void textBoxPassword_Enter(object sender, EventArgs e)
+        {
+            if (textBoxPassword.Text == "Type Your Password")
+            {
+                textBoxPassword.Text = "";
+                textBoxPassword.PasswordChar = '*';
+            }
+        }
+
+        private void textBoxPasswordVerify_Enter(object sender, EventArgs e)
+        {
+            if (textBoxPasswordVerify.Text == "Verify Your Password")
+            {
+                textBoxPasswordVerify.Text = "";
+                textBoxPasswordVerify.PasswordChar = '*';
+            }
+        }
     }
 }
 
