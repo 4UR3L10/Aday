@@ -95,7 +95,7 @@ namespace Aday_DA.Resources
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelHeader.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelHeader.Location = new System.Drawing.Point(146, 24);
+            this.labelHeader.Location = new System.Drawing.Point(112, 27);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(348, 46);
             this.labelHeader.TabIndex = 10;
@@ -106,6 +106,7 @@ namespace Aday_DA.Resources
             this.PictureBoxLastName.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxLastName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PictureBoxLastName.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PictureBoxLastName.Image = global::Aday_DA.Properties.Resources.clipart836353;
             this.PictureBoxLastName.Location = new System.Drawing.Point(0, 0);
             this.PictureBoxLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PictureBoxLastName.Name = "PictureBoxLastName";
@@ -139,6 +140,7 @@ namespace Aday_DA.Resources
             this.PictureBoxPassword.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PictureBoxPassword.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PictureBoxPassword.Image = global::Aday_DA.Resources.PicResource.clipart684108;
             this.PictureBoxPassword.InitialImage = ((System.Drawing.Image)(resources.GetObject("PictureBoxPassword.InitialImage")));
             this.PictureBoxPassword.Location = new System.Drawing.Point(0, 0);
             this.PictureBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -192,6 +194,7 @@ namespace Aday_DA.Resources
             this.PictureBoxFirstName.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxFirstName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PictureBoxFirstName.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PictureBoxFirstName.Image = global::Aday_DA.Properties.Resources.clipart836353;
             this.PictureBoxFirstName.Location = new System.Drawing.Point(0, 0);
             this.PictureBoxFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PictureBoxFirstName.Name = "PictureBoxFirstName";
@@ -228,6 +231,7 @@ namespace Aday_DA.Resources
             this.pictureBoxPasswordVerify.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxPasswordVerify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxPasswordVerify.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBoxPasswordVerify.Image = global::Aday_DA.Resources.PicResource.clipart684108;
             this.pictureBoxPasswordVerify.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxPasswordVerify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxPasswordVerify.Name = "pictureBoxPasswordVerify";
@@ -264,6 +268,7 @@ namespace Aday_DA.Resources
             this.pictureBoxEmailVerify.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxEmailVerify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxEmailVerify.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBoxEmailVerify.Image = global::Aday_DA.Resources.PicResource.clipart162850;
             this.pictureBoxEmailVerify.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxEmailVerify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxEmailVerify.Name = "pictureBoxEmailVerify";
@@ -300,6 +305,7 @@ namespace Aday_DA.Resources
             this.pictureBoxEmail.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxEmail.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBoxEmail.Image = global::Aday_DA.Resources.PicResource.clipart162850;
             this.pictureBoxEmail.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxEmail.InitialImage")));
             this.pictureBoxEmail.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
