@@ -51,13 +51,12 @@ namespace Aday_DA
             // 
             // textBoxEmail
             // 
-
             this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxEmail.Location = new System.Drawing.Point(49, 11);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(229, 18);
+            this.textBoxEmail.Size = new System.Drawing.Size(229, 22);
             this.textBoxEmail.TabIndex = 1;
             this.textBoxEmail.Click += new System.EventHandler(this.textBoxUsername_Click);
             this.textBoxEmail.Leave += new System.EventHandler(this.textBoxUsername_Leave);
@@ -88,7 +87,6 @@ namespace Aday_DA
             this.PictureBoxEmail.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PictureBoxEmail.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PictureBoxEmail.Image = global::Aday_DA.Resources.PicResource.clipart162850;
             this.PictureBoxEmail.Location = new System.Drawing.Point(0, 0);
             this.PictureBoxEmail.Name = "PictureBoxEmail";
             this.PictureBoxEmail.Size = new System.Drawing.Size(34, 38);
@@ -140,6 +138,7 @@ namespace Aday_DA
             this.textBoxPassword.Size = new System.Drawing.Size(262, 22);
             this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPassword_MouseClick);
+            this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
             this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
             // btnLogin
@@ -191,7 +190,7 @@ namespace Aday_DA
             this.labelExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelExit.Location = new System.Drawing.Point(342, 272);
             this.labelExit.Name = "labelExit";
-            this.labelExit.Size = new System.Drawing.Size(26, 15);
+            this.labelExit.Size = new System.Drawing.Size(33, 20);
             this.labelExit.TabIndex = 6;
             this.labelExit.Text = "Exit";
             this.labelExit.Click += new System.EventHandler(this.labelSignOut_Click);

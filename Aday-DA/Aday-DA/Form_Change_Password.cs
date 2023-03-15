@@ -156,5 +156,23 @@ namespace Aday_DA
                 textBoxPasswordVerify.PasswordChar = '\0';
             }
         }
+
+        private void textBoxPassword_Enter(object sender, EventArgs e)
+        {
+            if (textBoxPassword.Text == "Type Your Password")
+            {
+                textBoxPassword.Text = "";
+                textBoxPassword.PasswordChar = '*';
+            }
+        }
+
+        private void textBoxPasswordVerify_Enter(object sender, EventArgs e)
+        {
+            if (textBoxPasswordVerify.Text == "Verify Your Password")
+            {
+                textBoxPasswordVerify.Text = "";
+                textBoxPasswordVerify.PasswordChar = '*';
+            }
+        }
     }
 }
