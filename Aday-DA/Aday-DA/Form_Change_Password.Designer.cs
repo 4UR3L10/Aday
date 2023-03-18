@@ -62,40 +62,42 @@ namespace Aday_DA
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
             this.panel1.Controls.Add(this.labelHeader);
             this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(489, 74);
-            this.panel1.TabIndex = 5;
+            this.panel1.Size = new System.Drawing.Size(559, 99);
+            this.panel1.TabIndex = 7;
             // 
             // labelHeader
             // 
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelHeader.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelHeader.Location = new System.Drawing.Point(67, 20);
+            this.labelHeader.Location = new System.Drawing.Point(77, 27);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(358, 37);
-            this.labelHeader.TabIndex = 5;
+            this.labelHeader.Size = new System.Drawing.Size(451, 46);
+            this.labelHeader.TabIndex = 8;
             this.labelHeader.Text = "ADAY FORGOT PASSWORD";
             // 
             // panelEmail
             // 
             this.panelEmail.Controls.Add(this.pictureBoxEmail);
             this.panelEmail.Controls.Add(this.textBoxEmail);
-            this.panelEmail.Location = new System.Drawing.Point(104, 108);
+            this.panelEmail.Location = new System.Drawing.Point(119, 144);
+            this.panelEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(296, 38);
-            this.panelEmail.TabIndex = 10;
+            this.panelEmail.Size = new System.Drawing.Size(338, 51);
+            this.panelEmail.TabIndex = 1;
             // 
             // pictureBoxEmail
             // 
             this.pictureBoxEmail.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxEmail.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBoxEmail.Image = global::Aday_DA.Resources.PicResource.clipart162850;
             this.pictureBoxEmail.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxEmail.InitialImage")));
             this.pictureBoxEmail.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxEmail.Name = "pictureBoxEmail";
-            this.pictureBoxEmail.Size = new System.Drawing.Size(34, 38);
+            this.pictureBoxEmail.Size = new System.Drawing.Size(39, 51);
             this.pictureBoxEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxEmail.TabIndex = 5;
             this.pictureBoxEmail.TabStop = false;
@@ -105,10 +107,11 @@ namespace Aday_DA
             this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxEmail.Location = new System.Drawing.Point(49, 11);
+            this.textBoxEmail.Location = new System.Drawing.Point(56, 15);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(229, 18);
-            this.textBoxEmail.TabIndex = 3;
+            this.textBoxEmail.Size = new System.Drawing.Size(262, 22);
+            this.textBoxEmail.TabIndex = 9;
             this.textBoxEmail.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxEmail_MouseClick);
             this.textBoxEmail.MouseLeave += new System.EventHandler(this.textBoxEmail_MouseLeave);
             // 
@@ -119,10 +122,11 @@ namespace Aday_DA
             this.buttonSendPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSendPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonSendPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSendPassword.Location = new System.Drawing.Point(148, 336);
+            this.buttonSendPassword.Location = new System.Drawing.Point(169, 448);
+            this.buttonSendPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonSendPassword.Name = "buttonSendPassword";
-            this.buttonSendPassword.Size = new System.Drawing.Size(208, 38);
-            this.buttonSendPassword.TabIndex = 15;
+            this.buttonSendPassword.Size = new System.Drawing.Size(238, 51);
+            this.buttonSendPassword.TabIndex = 5;
             this.buttonSendPassword.Text = "Change Password";
             this.buttonSendPassword.UseVisualStyleBackColor = false;
             this.buttonSendPassword.Click += new System.EventHandler(this.buttonSendPassword_Click);
@@ -134,10 +138,11 @@ namespace Aday_DA
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnClose.Location = new System.Drawing.Point(148, 393);
+            this.btnClose.Location = new System.Drawing.Point(169, 524);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(208, 38);
-            this.btnClose.TabIndex = 12;
+            this.btnClose.Size = new System.Drawing.Size(238, 51);
+            this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -146,20 +151,21 @@ namespace Aday_DA
             // 
             this.panelEmailVerify.Controls.Add(this.pictureBoxEmailVerify);
             this.panelEmailVerify.Controls.Add(this.textBoxEmailVerify);
-            this.panelEmailVerify.Location = new System.Drawing.Point(106, 165);
+            this.panelEmailVerify.Location = new System.Drawing.Point(121, 220);
+            this.panelEmailVerify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelEmailVerify.Name = "panelEmailVerify";
-            this.panelEmailVerify.Size = new System.Drawing.Size(292, 38);
-            this.panelEmailVerify.TabIndex = 16;
+            this.panelEmailVerify.Size = new System.Drawing.Size(334, 51);
+            this.panelEmailVerify.TabIndex = 2;
             // 
             // pictureBoxEmailVerify
             // 
             this.pictureBoxEmailVerify.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxEmailVerify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxEmailVerify.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBoxEmailVerify.Image = global::Aday_DA.Resources.PicResource.clipart162850;
             this.pictureBoxEmailVerify.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxEmailVerify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxEmailVerify.Name = "pictureBoxEmailVerify";
-            this.pictureBoxEmailVerify.Size = new System.Drawing.Size(34, 38);
+            this.pictureBoxEmailVerify.Size = new System.Drawing.Size(39, 51);
             this.pictureBoxEmailVerify.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxEmailVerify.TabIndex = 5;
             this.pictureBoxEmailVerify.TabStop = false;
@@ -169,10 +175,11 @@ namespace Aday_DA
             this.textBoxEmailVerify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.textBoxEmailVerify.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEmailVerify.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxEmailVerify.Location = new System.Drawing.Point(49, 11);
+            this.textBoxEmailVerify.Location = new System.Drawing.Point(56, 15);
+            this.textBoxEmailVerify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxEmailVerify.Name = "textBoxEmailVerify";
-            this.textBoxEmailVerify.Size = new System.Drawing.Size(229, 18);
-            this.textBoxEmailVerify.TabIndex = 3;
+            this.textBoxEmailVerify.Size = new System.Drawing.Size(262, 22);
+            this.textBoxEmailVerify.TabIndex = 10;
             this.textBoxEmailVerify.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxEmailVerify_MouseClick);
             this.textBoxEmailVerify.MouseLeave += new System.EventHandler(this.textBoxEmailVerify_MouseLeave);
             // 
@@ -180,20 +187,21 @@ namespace Aday_DA
             // 
             this.panelPasswordVerify.Controls.Add(this.pictureBoxPasswordVerify);
             this.panelPasswordVerify.Controls.Add(this.textBoxPasswordVerify);
-            this.panelPasswordVerify.Location = new System.Drawing.Point(106, 279);
+            this.panelPasswordVerify.Location = new System.Drawing.Point(121, 372);
+            this.panelPasswordVerify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelPasswordVerify.Name = "panelPasswordVerify";
-            this.panelPasswordVerify.Size = new System.Drawing.Size(292, 38);
-            this.panelPasswordVerify.TabIndex = 18;
+            this.panelPasswordVerify.Size = new System.Drawing.Size(334, 51);
+            this.panelPasswordVerify.TabIndex = 4;
             // 
             // pictureBoxPasswordVerify
             // 
             this.pictureBoxPasswordVerify.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxPasswordVerify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxPasswordVerify.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBoxPasswordVerify.Image = global::Aday_DA.Resources.PicResource.clipart684108;
             this.pictureBoxPasswordVerify.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxPasswordVerify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxPasswordVerify.Name = "pictureBoxPasswordVerify";
-            this.pictureBoxPasswordVerify.Size = new System.Drawing.Size(34, 38);
+            this.pictureBoxPasswordVerify.Size = new System.Drawing.Size(39, 51);
             this.pictureBoxPasswordVerify.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPasswordVerify.TabIndex = 5;
             this.pictureBoxPasswordVerify.TabStop = false;
@@ -203,32 +211,35 @@ namespace Aday_DA
             this.textBoxPasswordVerify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.textBoxPasswordVerify.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPasswordVerify.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPasswordVerify.Location = new System.Drawing.Point(49, 11);
+            this.textBoxPasswordVerify.Location = new System.Drawing.Point(56, 15);
+            this.textBoxPasswordVerify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPasswordVerify.Name = "textBoxPasswordVerify";
-            this.textBoxPasswordVerify.Size = new System.Drawing.Size(229, 18);
-            this.textBoxPasswordVerify.TabIndex = 3;
+            this.textBoxPasswordVerify.Size = new System.Drawing.Size(262, 22);
+            this.textBoxPasswordVerify.TabIndex = 12;
             this.textBoxPasswordVerify.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPasswordVerify_MouseClick);
+            this.textBoxPasswordVerify.Enter += new System.EventHandler(this.textBoxPasswordVerify_Enter);
             this.textBoxPasswordVerify.MouseLeave += new System.EventHandler(this.textBoxPasswordVerify_MouseLeave);
             // 
             // panelPassword
             // 
             this.panelPassword.Controls.Add(this.PictureBoxPassword);
             this.panelPassword.Controls.Add(this.textBoxPassword);
-            this.panelPassword.Location = new System.Drawing.Point(106, 222);
+            this.panelPassword.Location = new System.Drawing.Point(121, 296);
+            this.panelPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelPassword.Name = "panelPassword";
-            this.panelPassword.Size = new System.Drawing.Size(292, 38);
-            this.panelPassword.TabIndex = 17;
+            this.panelPassword.Size = new System.Drawing.Size(334, 51);
+            this.panelPassword.TabIndex = 3;
             // 
             // PictureBoxPassword
             // 
             this.PictureBoxPassword.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PictureBoxPassword.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PictureBoxPassword.Image = global::Aday_DA.Resources.PicResource.clipart684108;
             this.PictureBoxPassword.InitialImage = ((System.Drawing.Image)(resources.GetObject("PictureBoxPassword.InitialImage")));
             this.PictureBoxPassword.Location = new System.Drawing.Point(0, 0);
+            this.PictureBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PictureBoxPassword.Name = "PictureBoxPassword";
-            this.PictureBoxPassword.Size = new System.Drawing.Size(34, 38);
+            this.PictureBoxPassword.Size = new System.Drawing.Size(39, 51);
             this.PictureBoxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBoxPassword.TabIndex = 5;
             this.PictureBoxPassword.TabStop = false;
@@ -238,18 +249,20 @@ namespace Aday_DA
             this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPassword.Location = new System.Drawing.Point(49, 11);
+            this.textBoxPassword.Location = new System.Drawing.Point(56, 15);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(229, 18);
-            this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.Size = new System.Drawing.Size(262, 22);
+            this.textBoxPassword.TabIndex = 11;
             this.textBoxPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPassword_MouseClick);
+            this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
             this.textBoxPassword.MouseLeave += new System.EventHandler(this.textBoxPassword_MouseLeave);
             // 
             // Form_Change_Password
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 454);
+            this.ClientSize = new System.Drawing.Size(563, 605);
             this.Controls.Add(this.panelPasswordVerify);
             this.Controls.Add(this.panelPassword);
             this.Controls.Add(this.panelEmailVerify);
@@ -257,6 +270,7 @@ namespace Aday_DA
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_Change_Password";
             this.Text = "Aday Forgot Change Password";
             this.Load += new System.EventHandler(this.Form_Change_Password_Load);

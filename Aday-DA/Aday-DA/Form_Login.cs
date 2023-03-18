@@ -30,6 +30,7 @@ namespace Aday_DA
         {
             textBoxPassword.Text = "Type Your Password";
             textBoxEmail.Text = "Type Your Email";
+            
         }
 
         private void textBoxUsername_Click(object sender, EventArgs e)
@@ -160,6 +161,15 @@ namespace Aday_DA
             Form_Change_Password formChangePassword = new Form_Change_Password();
             formChangePassword.Show();
             this.Enabled = false;
+        }
+
+        private void textBoxPassword_Enter(object sender, EventArgs e)
+        {
+            if (textBoxPassword.Text == "Type Your Password")
+            {
+                textBoxPassword.Text = "";
+                textBoxPassword.PasswordChar = '*';
+            }
         }
     }
 }
