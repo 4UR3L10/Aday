@@ -27,8 +27,8 @@ namespace Aday_DA
 
         private void bt_save_Event_Click(object sender, EventArgs e)
         {
-            this.Close();
-             
+            String[] row = { txtBox_Title.Text, dateTimePicker_StartDate.Text, dateTimePicker_EndDate.Text, txtBox_Location.Text, txtBox_Description.Text, chkBox_isHighImportance.Checked.ToString(), chkBox_isAllDay.Checked.ToString() };
+            Global.arrLstPlan.Add(row);
         }
 
         private void bt_close_Adding_Event_Click(object sender, EventArgs e)

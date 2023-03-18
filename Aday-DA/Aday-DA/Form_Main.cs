@@ -31,7 +31,7 @@ namespace Aday_DA
         {
             //MessageBox.Show("Hello World!","Message", MessageBoxButtons.OK,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1,MessageBoxOptions.DefaultDesktopOnly,false);
             Form_AddPlan AddPlan = new Form_AddPlan();
-            this.Enabled = false;
+            //this.Enabled = false;
             AddPlan.Show();
             Global.flagMain = true;
         }
@@ -42,7 +42,7 @@ namespace Aday_DA
             //this.Close();
             Form_AddEvent AddEvent = new Form_AddEvent();
             //this.TopLevel = false;
-            this.Enabled = false;
+            //this.Enabled = false;
             AddEvent.Show();
 
             //
@@ -84,6 +84,12 @@ namespace Aday_DA
         private void Form_Main_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonViewCalendar_Click(object sender, EventArgs e)
+        {
+            Form_Calendar Calendar = new Form_Calendar();
+            Calendar.Show();
         }
     }
 }

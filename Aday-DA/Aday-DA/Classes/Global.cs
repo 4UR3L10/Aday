@@ -12,5 +12,6 @@ namespace Aday_DA.Classes
         public static SqlConnection connectionVar;
         public static bool flagLogin;
         public static bool flagMain;
+        public static List<string[]> arrLstPlan = new List<string[]>();
     }
 }

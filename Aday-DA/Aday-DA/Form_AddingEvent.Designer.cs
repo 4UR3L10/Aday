@@ -72,7 +72,7 @@ namespace Aday_DA
             this.dateTimePicker_StartDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dateTimePicker_StartDate.Location = new System.Drawing.Point(188, 187);
             this.dateTimePicker_StartDate.Name = "dateTimePicker_StartDate";
-            this.dateTimePicker_StartDate.Size = new System.Drawing.Size(250, 27);
+            this.dateTimePicker_StartDate.Size = new System.Drawing.Size(465, 27);
             this.dateTimePicker_StartDate.TabIndex = 2;
             // 
             // dateTimePicker_EndDate
@@ -80,7 +80,7 @@ namespace Aday_DA
             this.dateTimePicker_EndDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dateTimePicker_EndDate.Location = new System.Drawing.Point(188, 242);
             this.dateTimePicker_EndDate.Name = "dateTimePicker_EndDate";
-            this.dateTimePicker_EndDate.Size = new System.Drawing.Size(250, 27);
+            this.dateTimePicker_EndDate.Size = new System.Drawing.Size(465, 27);
             this.dateTimePicker_EndDate.TabIndex = 3;
             // 
             // lbl_startDate
@@ -166,7 +166,7 @@ namespace Aday_DA
             this.bt_save_Event.BackColor = System.Drawing.SystemColors.Highlight;
             this.bt_save_Event.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_save_Event.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_save_Event.Location = new System.Drawing.Point(188, 493);
+            this.bt_save_Event.Location = new System.Drawing.Point(87, 497);
             this.bt_save_Event.Name = "bt_save_Event";
             this.bt_save_Event.Size = new System.Drawing.Size(239, 48);
             this.bt_save_Event.TabIndex = 10;
@@ -200,7 +200,7 @@ namespace Aday_DA
             this.bt_close_Adding_Event.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
             this.bt_close_Adding_Event.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_close_Adding_Event.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_close_Adding_Event.Location = new System.Drawing.Point(650, 493);
+            this.bt_close_Adding_Event.Location = new System.Drawing.Point(87, 575);
             this.bt_close_Adding_Event.Name = "bt_close_Adding_Event";
             this.bt_close_Adding_Event.Size = new System.Drawing.Size(239, 48);
             this.bt_close_Adding_Event.TabIndex = 13;
@@ -212,7 +212,7 @@ namespace Aday_DA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 588);
+            this.ClientSize = new System.Drawing.Size(997, 857);
             this.Controls.Add(this.bt_close_Adding_Event);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bt_save_Event);
