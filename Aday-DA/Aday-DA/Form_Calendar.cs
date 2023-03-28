@@ -14,7 +14,7 @@ namespace Aday_DA
         public Form_Calendar()
         {
             InitializeComponent();
-            foreach (string[] row in Global.arrLstPlan)
+            foreach (string[] row in Global.arrLstEvent)
             {                
                 foreach (string element in row)
                 {
@@ -40,23 +40,35 @@ namespace Aday_DA
             // Sort the items in the list in ascending order.
             listView1.Sorting = SortOrder.Ascending;
             // Create three items and three sets of subitems for each item.
-            ListViewItem item1 = new ListViewItem(Global.arrLstPlan[0]);
+            if(Global.arrLstEvent.Count > 0)
+            {
+                ListViewItem item1 = new ListViewItem(Global.arrLstEvent[0]);
 
-            listView1.Items.Add(item1);
+                listView1.Items.Add(item1);
 
-            //add columns
-            listView1.Columns.Add("Title", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("Start Date", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("End Date", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("Location", -2, HorizontalAlignment.Center);
-            listView1.Columns.Add("Description", -2, HorizontalAlignment.Center);
-            listView1.Columns.Add("High Importance", -2, HorizontalAlignment.Center);
-            listView1.Columns.Add("All Day", -2, HorizontalAlignment.Center);
+                //add columns
+                listView1.Columns.Add("Title", -2, HorizontalAlignment.Left);
+                listView1.Columns.Add("Start Date", -2, HorizontalAlignment.Left);
+                listView1.Columns.Add("End Date", -2, HorizontalAlignment.Left);
+                listView1.Columns.Add("Location", -2, HorizontalAlignment.Center);
+                listView1.Columns.Add("Description", -2, HorizontalAlignment.Center);
+                listView1.Columns.Add("High Importance", -2, HorizontalAlignment.Center);
+                listView1.Columns.Add("All Day", -2, HorizontalAlignment.Center);
 
 
-            // Add the ListView to the control collection.
-            this.Controls.Add(listView1);
-            //MessageBox.Show("Test");
+                // Add the ListView to the control collection.
+                this.Controls.Add(listView1);
+                //MessageBox.Show("Test");
+            }
+
+            if (Global.arrLstEvent.Count > 0)
+            {
+                foreach (Plan plan in Global.arrLstPlans)
+                {
+                    listViewPlans.Items.Add(plan.GetTitle());
+                }
+                //listViewPlans
+            }
         }
     }
 }

@@ -45,17 +45,17 @@ namespace Aday_DA
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHeader = new System.Windows.Forms.Label();
             this.bt_close_Adding_Event = new System.Windows.Forms.Button();
+            this.comboBoxPlan = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtBox_Title
             // 
             this.txtBox_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtBox_Title.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_Title.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtBox_Title.Location = new System.Drawing.Point(188, 124);
             this.txtBox_Title.Name = "txtBox_Title";
-            this.txtBox_Title.Size = new System.Drawing.Size(262, 22);
+            this.txtBox_Title.Size = new System.Drawing.Size(262, 29);
             this.txtBox_Title.TabIndex = 0;
             // 
             // lbl_Title
@@ -114,11 +114,10 @@ namespace Aday_DA
             // txtBox_Location
             // 
             this.txtBox_Location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtBox_Location.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_Location.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtBox_Location.Location = new System.Drawing.Point(188, 296);
             this.txtBox_Location.Name = "txtBox_Location";
-            this.txtBox_Location.Size = new System.Drawing.Size(262, 22);
+            this.txtBox_Location.Size = new System.Drawing.Size(262, 29);
             this.txtBox_Location.TabIndex = 7;
             // 
             // lbl_Description
@@ -134,11 +133,10 @@ namespace Aday_DA
             // txtBox_Description
             // 
             this.txtBox_Description.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtBox_Description.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_Description.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtBox_Description.Location = new System.Drawing.Point(188, 348);
             this.txtBox_Description.Name = "txtBox_Description";
-            this.txtBox_Description.Size = new System.Drawing.Size(262, 22);
+            this.txtBox_Description.Size = new System.Drawing.Size(262, 29);
             this.txtBox_Description.TabIndex = 7;
             // 
             // chkBox_isHighImportance
@@ -208,11 +206,20 @@ namespace Aday_DA
             this.bt_close_Adding_Event.UseVisualStyleBackColor = false;
             this.bt_close_Adding_Event.Click += new System.EventHandler(this.bt_close_Adding_Event_Click);
             // 
+            // comboBoxPlan
+            // 
+            this.comboBoxPlan.FormattingEnabled = true;
+            this.comboBoxPlan.Location = new System.Drawing.Point(188, 83);
+            this.comboBoxPlan.Name = "comboBoxPlan";
+            this.comboBoxPlan.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxPlan.TabIndex = 14;
+            // 
             // Form_AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 857);
+            this.Controls.Add(this.comboBoxPlan);
             this.Controls.Add(this.bt_close_Adding_Event);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bt_save_Event);
@@ -255,5 +262,6 @@ namespace Aday_DA
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.Button bt_close_Adding_Event;
+        private System.Windows.Forms.ComboBox comboBoxPlan;
     }
 }

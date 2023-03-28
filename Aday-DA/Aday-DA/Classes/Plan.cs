@@ -7,12 +7,14 @@ namespace Aday_DA.Classes
     class Plan
     {
         Event[] Events;
+        public List<Event> arrLstEvent;
         private string title;
 
         // Constructor.
-        public Plan()
+        public Plan(string title)
         {
-
+            List<Event[]> arrLstEvent = new List<Event[]>();
+            this.title = title;
         }
 
         // Getters.
