@@ -33,6 +33,7 @@ namespace Aday_DA
 
         private void bt_save_Event_Click(object sender, EventArgs e)
         {
+            bool found = false;
             // Check for DropDown EMpty.
             if (comboBoxPlan.SelectedIndex == -1)
             {
@@ -59,34 +60,40 @@ namespace Aday_DA
             else if (txtBox_Description.Text == "")
             {
                 MessageBox.Show("You cannot create a event without providing a description.");
-            }    
+            } 
+            
             // Check if the event on the selected plan is already added.
-            else if (Global.arrLstPlans.Count != 0)
+            if (Global.arrLstPlans.Count != 0)
             {
                 foreach (Plan plan in Global.arrLstPlans)
                 {
                     if (plan.GetTitle().Equals(comboBoxPlan.SelectedItem.ToString()))
                     {
-                        foreach (Event evnt in plan.arrLstEvent)
-                        {
-                            if(evnt.GetTitle().Equals(txtBox_Title.Text))
-                            {
-                                MessageBox.Show("You already have this event in this calendar.");
-                                comboBoxPlan.SelectedIndex = -1;
-                                txtBox_Title.Text = "";
-                                dateTimePicker_StartDate.Value = dateTimePicker_StartDate.MinDate;
-                                dateTimePicker_EndDate.Value = dateTimePicker_EndDate.MinDate;
-                                txtBox_Location.Text = "";
-                                txtBox_Description.Text = "";
-                                chkBox_isHighImportance.Checked = false;
-                                chkBox_isAllDay.Checked = false;
+                        if (plan.arrLstEvent != null)
+                        { 
+                            foreach (Event evnt in plan.arrLstEvent)
+                               {
+                                if (evnt.GetTitle().Equals(txtBox_Title.Text))
+                                {
+                                    MessageBox.Show("You already have this event in this calendar.");
+                                    comboBoxPlan.SelectedIndex = -1;
+                                    txtBox_Title.Text = "";
+                                    dateTimePicker_StartDate.Value = dateTimePicker_StartDate.MinDate;
+                                    dateTimePicker_EndDate.Value = dateTimePicker_EndDate.MinDate;
+                                    txtBox_Location.Text = "";
+                                    txtBox_Description.Text = "";
+                                    chkBox_isHighImportance.Checked = false;
+                                    chkBox_isAllDay.Checked = false;
+                                    found = true;
+                                }
                             }
-                        }
+                           }
                     }
                 }
-            }       
+            }    
+            
             // Add the event into the selected plan.
-            else
+            if (!found)
             {
                 foreach (Plan plan in Global.arrLstPlans)
                 {
@@ -95,7 +102,10 @@ namespace Aday_DA
                         Event userEventObj = new Event(txtBox_Title.Text, dateTimePicker_StartDate.Value, dateTimePicker_EndDate.Value, txtBox_Location.Text, txtBox_Description.Text);
                         userEventObj.isHighImportance = chkBox_isHighImportance.Checked;
                         userEventObj.isAllDay = chkBox_isAllDay.Checked;
-                        plan.arrLstEvent.Add(userEventObj);
+
+                        plan.ListInit().Add(userEventObj);
+                        
+                        //plan.arrLstEvent.Add(userEventObj);
 
                         MessageBox.Show("Event " + txtBox_Title.Text + " created successfully.");
                         comboBoxPlan.SelectedIndex = -1;
@@ -114,6 +124,7 @@ namespace Aday_DA
             String[] row = { txtBox_Title.Text, dateTimePicker_StartDate.Text, dateTimePicker_EndDate.Text, txtBox_Location.Text, txtBox_Description.Text, chkBox_isHighImportance.Checked.ToString(), chkBox_isAllDay.Checked.ToString() };
             Global.arrLstEvent.Add(row);
             */
+            MessageBox.Show("Test");
         }
 
         private void bt_close_Adding_Event_Click(object sender, EventArgs e)

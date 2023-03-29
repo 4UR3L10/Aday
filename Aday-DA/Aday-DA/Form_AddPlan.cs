@@ -17,7 +17,9 @@ namespace Aday_DA
         }
 
         private void bt_save_Plan_Click(object sender, EventArgs e)
-        {     
+        {
+            bool found = false;
+
             if (txtBox_Title.Text == "")
             {
                 MessageBox.Show("You cannot create a plan without providing a title.");
@@ -30,18 +32,20 @@ namespace Aday_DA
                     {
                         MessageBox.Show("You already have this plan in your calendar.");
                         txtBox_Title.Text = "";
+                        found = true;
                     }
                 }
             }        
-            else
-            {            
+            
+            if(!found)
+            {
                 //Global.arrLstPlan.Add(txtBox_Title.Text);
                 Plan planobj = new Plan(txtBox_Title.Text);
                 Global.arrLstPlans.Add(planobj);
 
                 MessageBox.Show("Plan " + txtBox_Title.Text + " created successfully.");
                 txtBox_Title.Text = "";
-            }            
+            }
         }
 
         private void Form_AddPlan_Load(object sender, EventArgs e)

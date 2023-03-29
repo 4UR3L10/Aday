@@ -21,7 +21,7 @@ namespace Aday_DA
                    //MessageBox.Show(element);
                 }
             }
-
+            /*
             // Create a new ListView control.
             ListView listView1 = new ListView();
             listView1.Bounds = new Rectangle(new Point(39, 26), new Size(776, 121));
@@ -60,14 +60,15 @@ namespace Aday_DA
                 this.Controls.Add(listView1);
                 //MessageBox.Show("Test");
             }
-
-            if (Global.arrLstEvent.Count > 0)
+            */
+            if (Global.arrLstPlans.Count > 0)
             {
                 foreach (Plan plan in Global.arrLstPlans)
                 {
-                    listViewPlans.Items.Add(plan.GetTitle());
+                    ListViewItem item1 = new ListViewItem(plan.GetTitle());
+                    listViewPlans.Items.Add(item1);
                 }
-                //listViewPlans
+
             }
         }
     }

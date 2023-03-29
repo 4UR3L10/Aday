@@ -30,16 +30,30 @@ namespace Aday_DA
         private void InitializeComponent()
         {
             this.listViewPlans = new System.Windows.Forms.ListView();
+            this.columnHeaderPlan = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // listViewPlans
             // 
+            this.listViewPlans.AllowColumnReorder = true;
+            this.listViewPlans.CheckBoxes = true;
+            this.listViewPlans.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderPlan});
+            this.listViewPlans.FullRowSelect = true;
+            this.listViewPlans.GridLines = true;
             this.listViewPlans.HideSelection = false;
+            this.listViewPlans.LabelEdit = true;
             this.listViewPlans.Location = new System.Drawing.Point(63, 208);
             this.listViewPlans.Name = "listViewPlans";
             this.listViewPlans.Size = new System.Drawing.Size(705, 214);
+            this.listViewPlans.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listViewPlans.TabIndex = 0;
             this.listViewPlans.UseCompatibleStateImageBehavior = false;
+            this.listViewPlans.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderPlan
+            // 
+            this.columnHeaderPlan.Text = "Plan";
             // 
             // Form_Calendar
             // 
@@ -56,5 +70,6 @@ namespace Aday_DA
         #endregion
 
         private System.Windows.Forms.ListView listViewPlans;
+        private System.Windows.Forms.ColumnHeader columnHeaderPlan;
     }
 }

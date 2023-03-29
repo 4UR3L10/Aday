@@ -28,5 +28,12 @@ namespace Aday_DA.Classes
         {
             this.title = title;
         }
+
+        // Testing.
+        public List<Event> ListInit()
+        {
+            List<Event> arrLstEvent = new List<Event>();
+            return arrLstEvent;
+        }
     }
 }
