@@ -29,47 +29,77 @@ namespace Aday_DA
         /// </summary>
         private void InitializeComponent()
         {
-            this.listViewPlans = new System.Windows.Forms.ListView();
-            this.columnHeaderPlan = new System.Windows.Forms.ColumnHeader();
+            this.flowLayoutPanelPlans = new System.Windows.Forms.FlowLayoutPanel();
+            this.bt_close_Calendar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelHeader = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listViewPlans
+            // flowLayoutPanelPlans
             // 
-            this.listViewPlans.AllowColumnReorder = true;
-            this.listViewPlans.CheckBoxes = true;
-            this.listViewPlans.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderPlan});
-            this.listViewPlans.FullRowSelect = true;
-            this.listViewPlans.GridLines = true;
-            this.listViewPlans.HideSelection = false;
-            this.listViewPlans.LabelEdit = true;
-            this.listViewPlans.Location = new System.Drawing.Point(63, 208);
-            this.listViewPlans.Name = "listViewPlans";
-            this.listViewPlans.Size = new System.Drawing.Size(705, 214);
-            this.listViewPlans.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.listViewPlans.TabIndex = 0;
-            this.listViewPlans.UseCompatibleStateImageBehavior = false;
-            this.listViewPlans.View = System.Windows.Forms.View.Details;
+            this.flowLayoutPanelPlans.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanelPlans.Location = new System.Drawing.Point(21, 83);
+            this.flowLayoutPanelPlans.Name = "flowLayoutPanelPlans";
+            this.flowLayoutPanelPlans.Size = new System.Drawing.Size(776, 637);
+            this.flowLayoutPanelPlans.TabIndex = 1;
             // 
-            // columnHeaderPlan
+            // bt_close_Calendar
             // 
-            this.columnHeaderPlan.Text = "Plan";
+            this.bt_close_Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
+            this.bt_close_Calendar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_close_Calendar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bt_close_Calendar.Location = new System.Drawing.Point(265, 726);
+            this.bt_close_Calendar.Name = "bt_close_Calendar";
+            this.bt_close_Calendar.Size = new System.Drawing.Size(239, 48);
+            this.bt_close_Calendar.TabIndex = 5;
+            this.bt_close_Calendar.Text = "Close";
+            this.bt_close_Calendar.UseVisualStyleBackColor = false;
+            this.bt_close_Calendar.Click += new System.EventHandler(this.bt_close_Calendar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
+            this.panel1.Controls.Add(this.labelHeader);
+            this.panel1.Location = new System.Drawing.Point(1, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(796, 65);
+            this.panel1.TabIndex = 7;
+            // 
+            // labelHeader
+            // 
+            this.labelHeader.AutoSize = true;
+            this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelHeader.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelHeader.Location = new System.Drawing.Point(310, 7);
+            this.labelHeader.Name = "labelHeader";
+            this.labelHeader.Size = new System.Drawing.Size(161, 46);
+            this.labelHeader.TabIndex = 5;
+            this.labelHeader.Text = "Calendar";
             // 
             // Form_Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listViewPlans);
+            this.ClientSize = new System.Drawing.Size(800, 786);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.bt_close_Calendar);
+            this.Controls.Add(this.flowLayoutPanelPlans);
             this.Name = "Form_Calendar";
             this.Text = "Form_Calendar";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listViewPlans;
-        private System.Windows.Forms.ColumnHeader columnHeaderPlan;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelPlans;
+        private System.Windows.Forms.Button bt_close_Calendar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelHeader;
     }
 }

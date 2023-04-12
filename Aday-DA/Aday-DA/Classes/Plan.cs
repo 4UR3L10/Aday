@@ -6,14 +6,14 @@ namespace Aday_DA.Classes
 {
     class Plan
     {
-        Event[] Events;
-        public List<Event> arrLstEvent;
+        //Event[] Events;
+         
         private string title;
+        public List<Event> arrLstEventProp = new List<Event>();
 
         // Constructor.
         public Plan(string title)
-        {
-            List<Event[]> arrLstEvent = new List<Event[]>();
+        {            
             this.title = title;
         }
 
@@ -30,10 +30,17 @@ namespace Aday_DA.Classes
         }
 
         // Testing.
+        /*
         public List<Event> ListInit()
         {
-            List<Event> arrLstEvent = new List<Event>();
-            return arrLstEvent;
+            //List<Event> arrLstEvent = new List<Event>();
+            //return arrLstEvent;
+        }
+        */
+
+        public void ListInitt()
+        {
+            //List<Event> arrLstEvent = new List<Event>();
         }
     }
 }
