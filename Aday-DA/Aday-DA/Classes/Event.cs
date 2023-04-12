@@ -12,13 +12,18 @@ namespace Aday_DA.Classes
         private DateTime reminder;
         private string location;
         private string description;
-        bool isHighImportance;
-        bool isAllDay;
-        
-        // Constructor.
-        public Event()
-        {
+        public bool isHighImportance;
+        public bool isAllDay;
+              
 
+        // Constructor.
+        public Event(string title, DateTime startDateTime, DateTime endDateTime, string location, string description)
+        {
+            this.title = title;
+            this.startDateTime= startDateTime;
+            this.endDateTime = endDateTime;
+            this.location = location;
+            this.description = description;
         }
 
         // Getters.

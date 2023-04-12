@@ -44,7 +44,7 @@ namespace Aday_DA
             this.bt_save_Plan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_Plan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_save_Plan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_save_Plan.Location = new System.Drawing.Point(34, 355);
+            this.bt_save_Plan.Location = new System.Drawing.Point(100, 170);
             this.bt_save_Plan.Name = "bt_save_Plan";
             this.bt_save_Plan.Size = new System.Drawing.Size(239, 48);
             this.bt_save_Plan.TabIndex = 0;
@@ -64,11 +64,11 @@ namespace Aday_DA
             // txtBox_Title
             // 
             this.txtBox_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtBox_Title.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox_Title.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBox_Title.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtBox_Title.Location = new System.Drawing.Point(88, 122);
             this.txtBox_Title.Name = "txtBox_Title";
-            this.txtBox_Title.Size = new System.Drawing.Size(262, 22);
+            this.txtBox_Title.Size = new System.Drawing.Size(262, 29);
             this.txtBox_Title.TabIndex = 2;
             // 
             // panel1
@@ -78,7 +78,7 @@ namespace Aday_DA
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 65);
+            this.panel1.Size = new System.Drawing.Size(414, 65);
             this.panel1.TabIndex = 5;
             // 
             // labelHeader
@@ -86,7 +86,7 @@ namespace Aday_DA
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelHeader.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelHeader.Location = new System.Drawing.Point(266, 10);
+            this.labelHeader.Location = new System.Drawing.Point(161, 10);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(151, 46);
             this.labelHeader.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace Aday_DA
             this.bt_close_Add_Plan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
             this.bt_close_Add_Plan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_close_Add_Plan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_close_Add_Plan.Location = new System.Drawing.Point(501, 355);
+            this.bt_close_Add_Plan.Location = new System.Drawing.Point(100, 243);
             this.bt_close_Add_Plan.Name = "bt_close_Add_Plan";
             this.bt_close_Add_Plan.Size = new System.Drawing.Size(239, 48);
             this.bt_close_Add_Plan.TabIndex = 6;
@@ -109,7 +109,7 @@ namespace Aday_DA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(413, 336);
             this.Controls.Add(this.bt_close_Add_Plan);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_Title);
