@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Aday_DA.Classes;
+using Microsoft.Toolkit.Uwp.Notifications;
+
 namespace Aday_DA
 {
     public partial class Form_AddEvent : Form
@@ -13,6 +15,11 @@ namespace Aday_DA
         public Form_AddEvent()
         {
             InitializeComponent();
+
+            dateTimePicker_StartDate.Format = DateTimePickerFormat.Custom;            
+            dateTimePicker_StartDate.CustomFormat = "MMMM dd, yyyy hh:mm:ss tt";
+            dateTimePicker_EndDate.Format = DateTimePickerFormat.Custom;
+            dateTimePicker_EndDate.CustomFormat = "MMMM dd, yyyy hh:mm:ss tt";
 
             // Load all the Existing Plan.
             foreach (Plan plan in Global.arrLstPlans)

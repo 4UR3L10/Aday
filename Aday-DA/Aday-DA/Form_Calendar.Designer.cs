@@ -29,10 +29,12 @@ namespace Aday_DA
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.flowLayoutPanelPlans = new System.Windows.Forms.FlowLayoutPanel();
             this.bt_close_Calendar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHeader = new System.Windows.Forms.Label();
+            this.timerGlobal = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +82,10 @@ namespace Aday_DA
             this.labelHeader.TabIndex = 5;
             this.labelHeader.Text = "Calendar";
             // 
+            // timerGlobal
+            // 
+            this.timerGlobal.Tick += new System.EventHandler(this.timerGlobal_Tick);
+            // 
             // Form_Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -101,5 +107,6 @@ namespace Aday_DA
         private System.Windows.Forms.Button bt_close_Calendar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelHeader;
+        private System.Windows.Forms.Timer timerGlobal;
     }
 }
