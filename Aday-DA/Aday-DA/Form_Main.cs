@@ -47,5 +47,10 @@ namespace Aday_DA
             Form_Calendar Calendar = new Form_Calendar();
             Calendar.Show();
         }
+
+        private void bt_delete_Plan_Event_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

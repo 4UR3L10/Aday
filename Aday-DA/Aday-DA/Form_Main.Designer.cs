@@ -29,6 +29,7 @@ namespace Aday_DA
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.bt_add_Plan = new System.Windows.Forms.Button();
             this.bt_delete_Plan_Event = new System.Windows.Forms.Button();
             this.bt_add_Event = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@ namespace Aday_DA
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHeader = new System.Windows.Forms.Label();
             this.buttonViewCalendar = new System.Windows.Forms.Button();
+            this.timerGlobal = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +66,7 @@ namespace Aday_DA
             this.bt_delete_Plan_Event.TabIndex = 1;
             this.bt_delete_Plan_Event.Text = "Delete";
             this.bt_delete_Plan_Event.UseVisualStyleBackColor = false;
+            this.bt_delete_Plan_Event.Click += new System.EventHandler(this.bt_delete_Plan_Event_Click);
             // 
             // bt_add_Event
             // 
@@ -155,6 +158,7 @@ namespace Aday_DA
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.Button buttonViewCalendar;
+        private System.Windows.Forms.Timer timerGlobal;
     }
 }
 
