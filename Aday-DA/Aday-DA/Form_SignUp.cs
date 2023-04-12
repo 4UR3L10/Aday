@@ -200,18 +200,7 @@ namespace Aday_DA.Resources
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            if (Global.flagLogin)
-            {
-                this.Close();
-                Form_Login formLogin = new Form_Login();
-                //form2.BringToFront();
-                formLogin.Show();
-            }
-            else
-            {
-                this.Enabled = true;
-            }
+            this.Close();
         }
 
         private void textBoxPassword_Enter(object sender, EventArgs e)

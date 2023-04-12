@@ -53,6 +53,7 @@ namespace Aday_DA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            /*
             String email = "";
             String password = "";
 
@@ -109,7 +110,7 @@ namespace Aday_DA
 
             Global.connectionVar.Close();
 
-            if (email == textBoxEmail.Text && password == hash /*textBoxPassword.Text*/)
+            if (email == textBoxEmail.Text && password == hash)
             {
                 MessageBox.Show("Login Successfully");
                 Form_Main newMain = new Form_Main();
@@ -121,6 +122,9 @@ namespace Aday_DA
             {
                 MessageBox.Show("Email/Password is incorrect.");
             }
+            */
+            Form_Main newMain = new Form_Main();
+            newMain.Show();
         }
 
         private void labelSignOut_Click(object sender, EventArgs e)
