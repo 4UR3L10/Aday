@@ -35,6 +35,7 @@ namespace Aday_DA
             this.bt_close_Main = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHeader = new System.Windows.Forms.Label();
+            this.buttonViewCalendar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,11 +112,25 @@ namespace Aday_DA
             this.labelHeader.TabIndex = 5;
             this.labelHeader.Text = "ADAY.....";
             // 
+            // buttonViewCalendar
+            // 
+            this.buttonViewCalendar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonViewCalendar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonViewCalendar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonViewCalendar.Location = new System.Drawing.Point(283, 258);
+            this.buttonViewCalendar.Name = "buttonViewCalendar";
+            this.buttonViewCalendar.Size = new System.Drawing.Size(239, 48);
+            this.buttonViewCalendar.TabIndex = 7;
+            this.buttonViewCalendar.Text = "View Calendar";
+            this.buttonViewCalendar.UseVisualStyleBackColor = false;
+            this.buttonViewCalendar.Click += new System.EventHandler(this.buttonViewCalendar_Click);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 501);
+            this.Controls.Add(this.buttonViewCalendar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bt_close_Main);
             this.Controls.Add(this.bt_add_Event);
@@ -139,6 +154,7 @@ namespace Aday_DA
         private System.Windows.Forms.Button bt_close_Main;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelHeader;
+        private System.Windows.Forms.Button buttonViewCalendar;
     }
 }
 
