@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Aday_DA.Classes;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace Aday_DA
 {
@@ -15,6 +16,14 @@ namespace Aday_DA
         {
             InitializeComponent();
 
+            // Create a new Timer control
+            timerGlobal = new Timer();
+            timerGlobal.Interval = 1000; // Change it to minutesssssssssssssssssssssssssssssssssssssssssssssss.
+            timerGlobal.Tick += new EventHandler(timerGlobal_Tick);
+            timerGlobal.Start();
+
+
+            // Plans-Events
             if (Global.arrLstPlans.Count > 0)
             {
                 if (Global.arrLstPlans.Count > 3)
@@ -84,6 +93,34 @@ namespace Aday_DA
         private void bt_close_Calendar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void timerGlobal_Tick(object sender, EventArgs e)
+        {
+            // CHeck Every Second for an event begin time notification.
+            if (Global.arrLstPlans.Count > 0)
+            {
+                foreach (Plan plan in Global.arrLstPlans)
+                {
+                    if (plan.arrLstEventProp.Count > 0)
+                    {
+                        foreach (Event evnt in plan.arrLstEventProp)
+                        {
+                            if (evnt.GetStartDateTime().ToString() == DateTime.Now.ToString())
+                            {
+                                //MessageBox.Show("The following event:" + evnt.GetTitle() + " on plan " + plan.GetTitle() + " just started.");
+
+                                new ToastContentBuilder()
+                                .AddArgument("action", "viewConversation")
+                                .AddArgument("conversationId", 9813)
+                                .AddText("Event Started")
+                                .AddText("The following event:" + evnt.GetTitle() + " on plan " + plan.GetTitle() + " just started.")
+                .               Show();
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
