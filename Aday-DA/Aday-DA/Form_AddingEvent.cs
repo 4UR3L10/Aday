@@ -149,11 +149,11 @@ namespace Aday_DA
         {
             string selectedDate = "";
 
+            comboBoxPlan.Items.Clear();
+
             if (comboBoxDate.SelectedIndex != -1)
             {
-
-                selectedDate = comboBoxDate.SelectedItem.ToString();
-                comboBoxPlan.Items.Clear();
+                selectedDate = comboBoxDate.SelectedItem.ToString();                
 
                 // Load all the Existing Plan in that Date.
                 foreach (Plan plan in Global.arrLstPlans)
