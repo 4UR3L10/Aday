@@ -74,9 +74,9 @@ namespace Aday_DA
             this.labelHeader.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelHeader.Location = new System.Drawing.Point(77, 27);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(451, 46);
+            this.labelHeader.Size = new System.Drawing.Size(456, 46);
             this.labelHeader.TabIndex = 8;
-            this.labelHeader.Text = "ADAY FORGOT PASSWORD";
+            this.labelHeader.Text = "ADAY CHANGE PASSWORD";
             // 
             // panelEmail
             // 
