@@ -149,6 +149,7 @@ namespace Aday_DA
         {
             string selectedDate = "";
 
+            comboBoxPlan.SelectedIndex = -1;
             comboBoxPlan.Items.Clear();
 
             if (comboBoxDate.SelectedIndex != -1)
@@ -161,9 +162,10 @@ namespace Aday_DA
                     if(plan.GetPlanDateYearFormatString().Equals(selectedDate))
                     {
                         comboBoxPlan.Items.Add(plan.GetTitle());
+                        
                     }                    
                 }
-            }
+            }            
         }
     }
 }
