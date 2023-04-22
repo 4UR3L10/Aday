@@ -23,6 +23,12 @@ namespace Aday_DA
             if (txtBox_Title.Text == "")
             {
                 MessageBox.Show("You cannot create a plan without providing a title.");
+                found = true;
+            }
+            else if (dateTimePickerPlanDate.Value == dateTimePickerPlanDate.MinDate)
+            {
+                MessageBox.Show("You cannot create a plan without providing a date.");
+                found = true;                
             }
             else if (Global.arrLstPlans.Count != 0)
             {
@@ -39,8 +45,7 @@ namespace Aday_DA
             
             if(!found)
             {
-                //Global.arrLstPlan.Add(txtBox_Title.Text);
-                Plan planobj = new Plan(txtBox_Title.Text);
+                Plan planobj = new Plan(txtBox_Title.Text, dateTimePickerPlanDate.Value);
                 Global.arrLstPlans.Add(planobj);
 
                 MessageBox.Show("Plan " + txtBox_Title.Text + " created successfully.");

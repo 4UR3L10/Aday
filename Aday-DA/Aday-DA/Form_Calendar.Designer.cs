@@ -45,7 +45,7 @@ namespace Aday_DA
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanelPlans.Location = new System.Drawing.Point(21, 83);
             this.flowLayoutPanelPlans.Name = "flowLayoutPanelPlans";
-            this.flowLayoutPanelPlans.Size = new System.Drawing.Size(776, 637);
+            this.flowLayoutPanelPlans.Size = new System.Drawing.Size(776, 753);
             this.flowLayoutPanelPlans.TabIndex = 1;
             // 
             // bt_close_Calendar
@@ -53,7 +53,7 @@ namespace Aday_DA
             this.bt_close_Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
             this.bt_close_Calendar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_close_Calendar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_close_Calendar.Location = new System.Drawing.Point(265, 726);
+            this.bt_close_Calendar.Location = new System.Drawing.Point(268, 925);
             this.bt_close_Calendar.Name = "bt_close_Calendar";
             this.bt_close_Calendar.Size = new System.Drawing.Size(239, 48);
             this.bt_close_Calendar.TabIndex = 5;
@@ -90,7 +90,7 @@ namespace Aday_DA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 786);
+            this.ClientSize = new System.Drawing.Size(800, 985);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bt_close_Calendar);
             this.Controls.Add(this.flowLayoutPanelPlans);
