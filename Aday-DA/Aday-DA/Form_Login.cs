@@ -125,6 +125,7 @@ namespace Aday_DA
             */
             Form_Main newMain = new Form_Main();
             newMain.Show();
+            this.Enabled = false;
         }
 
         private void labelSignOut_Click(object sender, EventArgs e)
@@ -136,7 +137,7 @@ namespace Aday_DA
         {
             Form_SignUp formSignUp = new Form_SignUp();    
             formSignUp.Show();
-            this.Enabled = false;
+            //this.Enabled = false;
         }
 
         private void textBoxPassword_Leave(object sender, EventArgs e)
@@ -160,7 +161,7 @@ namespace Aday_DA
         {
             Form_Change_Password formChangePassword = new Form_Change_Password();
             formChangePassword.Show();
-            this.Enabled = false;
+           
         }
 
         private void textBoxPassword_Enter(object sender, EventArgs e)
