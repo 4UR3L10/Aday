@@ -14,6 +14,7 @@ namespace Aday_DA
         public Form_AddPlan()
         {
             InitializeComponent();
+            dateTimePickerPlanDate.MinDate = DateTime.Today;
         }
 
         private void bt_save_Plan_Click(object sender, EventArgs e)

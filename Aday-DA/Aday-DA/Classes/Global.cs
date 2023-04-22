@@ -42,5 +42,21 @@ namespace Aday_DA.Classes
             
             return dates;
         }
+
+        public static int GetPlanByDate(String formattedDate)
+        {
+            int counter = 0;
+
+            // Load all the Existing Plan Dates.
+            foreach (Plan plan in arrLstPlans)
+            {
+                if (plan.GetPlanDateYearFormatString().Equals(formattedDate))
+                {
+                    counter++;
+                }           
+            }
+
+            return counter;
+        }
     }
 }

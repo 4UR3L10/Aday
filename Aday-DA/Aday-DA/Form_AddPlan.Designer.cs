@@ -88,11 +88,11 @@ namespace Aday_DA
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelHeader.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelHeader.Location = new System.Drawing.Point(72, 10);
+            this.labelHeader.Location = new System.Drawing.Point(122, 10);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(292, 46);
+            this.labelHeader.Size = new System.Drawing.Size(193, 46);
             this.labelHeader.TabIndex = 5;
-            this.labelHeader.Text = "ADAY ADD PLAN";
+            this.labelHeader.Text = "ADD PLAN";
             // 
             // bt_close_Add_Plan
             // 

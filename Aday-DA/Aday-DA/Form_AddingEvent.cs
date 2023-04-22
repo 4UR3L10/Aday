@@ -16,10 +16,8 @@ namespace Aday_DA
         {
             InitializeComponent();
 
-            dateTimePicker_StartDate.Format = DateTimePickerFormat.Custom;            
-            dateTimePicker_StartDate.CustomFormat = "MMMM dd, yyyy hh:mm:ss tt";
-            dateTimePicker_EndDate.Format = DateTimePickerFormat.Custom;
-            dateTimePicker_EndDate.CustomFormat = "MMMM dd, yyyy hh:mm:ss tt";
+            dateTimePicker_StartDate.MinDate = DateTime.Today;
+            dateTimePicker_EndDate.MinDate = DateTime.Today;
 
             // Load all the Existing Plan Dates.
             foreach (String strdate in Global.GetOrderedPlanDates())
@@ -91,7 +89,7 @@ namespace Aday_DA
                                 {
                                     if (evnt.GetTitle().Equals(txtBox_Title.Text))
                                     {
-                                        MessageBox.Show("You already have this event in this calendar.");
+                                        MessageBox.Show("You already have this event in this plan.");
                                         comboBoxPlan.SelectedIndex = -1;
                                         txtBox_Title.Text = "";
                                         dateTimePicker_StartDate.Value = dateTimePicker_StartDate.MinDate;
@@ -110,8 +108,7 @@ namespace Aday_DA
 
                 // Add the event into the selected plan.
                 if (!found)
-                {
-                    /*foreach (Plan plan in Global.arrLstPlans)*/
+                {                    
                     foreach (Plan plan in Global.arrLstPlans)
                     {
                         if (plan.GetTitle().Equals(selectedPlan))
@@ -123,6 +120,8 @@ namespace Aday_DA
                             plan.arrLstEventProp.Add(userEventObj);
 
                             MessageBox.Show("Event " + txtBox_Title.Text + " created successfully.");
+
+                            // Reset.
                             comboBoxPlan.SelectedIndex = -1;
                             txtBox_Title.Text = "";
                             dateTimePicker_StartDate.Value = dateTimePicker_StartDate.MinDate;
@@ -161,8 +160,7 @@ namespace Aday_DA
                 {
                     if(plan.GetPlanDateYearFormatString().Equals(selectedDate))
                     {
-                        comboBoxPlan.Items.Add(plan.GetTitle());
-                        
+                        comboBoxPlan.Items.Add(plan.GetTitle());                        
                     }                    
                 }
             }            

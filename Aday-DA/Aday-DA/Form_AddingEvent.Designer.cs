@@ -64,7 +64,7 @@ namespace Aday_DA
             // lbl_Title
             // 
             this.lbl_Title.AutoSize = true;
-            this.lbl_Title.Location = new System.Drawing.Point(134, 199);
+            this.lbl_Title.Location = new System.Drawing.Point(137, 200);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(38, 20);
             this.lbl_Title.TabIndex = 1;
@@ -73,41 +73,45 @@ namespace Aday_DA
             // dateTimePicker_StartDate
             // 
             this.dateTimePicker_StartDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker_StartDate.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker_StartDate.Location = new System.Drawing.Point(188, 251);
             this.dateTimePicker_StartDate.Name = "dateTimePicker_StartDate";
-            this.dateTimePicker_StartDate.Size = new System.Drawing.Size(465, 27);
+            this.dateTimePicker_StartDate.ShowUpDown = true;
+            this.dateTimePicker_StartDate.Size = new System.Drawing.Size(262, 27);
             this.dateTimePicker_StartDate.TabIndex = 2;
             // 
             // dateTimePicker_EndDate
             // 
             this.dateTimePicker_EndDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker_EndDate.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker_EndDate.Location = new System.Drawing.Point(188, 306);
             this.dateTimePicker_EndDate.Name = "dateTimePicker_EndDate";
-            this.dateTimePicker_EndDate.Size = new System.Drawing.Size(465, 27);
+            this.dateTimePicker_EndDate.ShowUpDown = true;
+            this.dateTimePicker_EndDate.Size = new System.Drawing.Size(262, 27);
             this.dateTimePicker_EndDate.TabIndex = 3;
             // 
             // lbl_startDate
             // 
             this.lbl_startDate.AutoSize = true;
-            this.lbl_startDate.Location = new System.Drawing.Point(59, 251);
+            this.lbl_startDate.Location = new System.Drawing.Point(98, 256);
             this.lbl_startDate.Name = "lbl_startDate";
-            this.lbl_startDate.Size = new System.Drawing.Size(113, 20);
+            this.lbl_startDate.Size = new System.Drawing.Size(77, 20);
             this.lbl_startDate.TabIndex = 4;
-            this.lbl_startDate.Text = "Start Date Time";
+            this.lbl_startDate.Text = "Start Time";
             // 
             // lbl_endDate
             // 
             this.lbl_endDate.AutoSize = true;
-            this.lbl_endDate.Location = new System.Drawing.Point(65, 306);
+            this.lbl_endDate.Location = new System.Drawing.Point(104, 311);
             this.lbl_endDate.Name = "lbl_endDate";
-            this.lbl_endDate.Size = new System.Drawing.Size(107, 20);
+            this.lbl_endDate.Size = new System.Drawing.Size(71, 20);
             this.lbl_endDate.TabIndex = 5;
-            this.lbl_endDate.Text = "End Date Time";
+            this.lbl_endDate.Text = "End Time";
             // 
             // lbl_Location
             // 
             this.lbl_Location.AutoSize = true;
-            this.lbl_Location.Location = new System.Drawing.Point(109, 367);
+            this.lbl_Location.Location = new System.Drawing.Point(109, 364);
             this.lbl_Location.Name = "lbl_Location";
             this.lbl_Location.Size = new System.Drawing.Size(66, 20);
             this.lbl_Location.TabIndex = 6;
@@ -125,7 +129,7 @@ namespace Aday_DA
             // lbl_Description
             // 
             this.lbl_Description.AutoSize = true;
-            this.lbl_Description.Location = new System.Drawing.Point(87, 415);
+            this.lbl_Description.Location = new System.Drawing.Point(90, 416);
             this.lbl_Description.Name = "lbl_Description";
             this.lbl_Description.Size = new System.Drawing.Size(85, 20);
             this.lbl_Description.TabIndex = 6;
@@ -188,11 +192,11 @@ namespace Aday_DA
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelHeader.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelHeader.Location = new System.Drawing.Point(154, 8);
+            this.labelHeader.Location = new System.Drawing.Point(207, 8);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(308, 46);
+            this.labelHeader.Size = new System.Drawing.Size(209, 46);
             this.labelHeader.TabIndex = 5;
-            this.labelHeader.Text = "ADAY ADD EVENT";
+            this.labelHeader.Text = "ADD EVENT";
             // 
             // bt_close_Adding_Event
             // 
@@ -212,13 +216,13 @@ namespace Aday_DA
             this.comboBoxPlan.FormattingEnabled = true;
             this.comboBoxPlan.Location = new System.Drawing.Point(188, 142);
             this.comboBoxPlan.Name = "comboBoxPlan";
-            this.comboBoxPlan.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxPlan.Size = new System.Drawing.Size(262, 28);
             this.comboBoxPlan.TabIndex = 14;
             // 
             // labelPlan
             // 
             this.labelPlan.AutoSize = true;
-            this.labelPlan.Location = new System.Drawing.Point(134, 93);
+            this.labelPlan.Location = new System.Drawing.Point(131, 93);
             this.labelPlan.Name = "labelPlan";
             this.labelPlan.Size = new System.Drawing.Size(41, 20);
             this.labelPlan.TabIndex = 16;
@@ -227,7 +231,7 @@ namespace Aday_DA
             // labelPlanEv
             // 
             this.labelPlanEv.AutoSize = true;
-            this.labelPlanEv.Location = new System.Drawing.Point(131, 145);
+            this.labelPlanEv.Location = new System.Drawing.Point(138, 145);
             this.labelPlanEv.Name = "labelPlanEv";
             this.labelPlanEv.Size = new System.Drawing.Size(37, 20);
             this.labelPlanEv.TabIndex = 17;
@@ -238,7 +242,7 @@ namespace Aday_DA
             this.comboBoxDate.FormattingEnabled = true;
             this.comboBoxDate.Location = new System.Drawing.Point(188, 90);
             this.comboBoxDate.Name = "comboBoxDate";
-            this.comboBoxDate.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxDate.Size = new System.Drawing.Size(262, 28);
             this.comboBoxDate.TabIndex = 18;
             this.comboBoxDate.SelectedIndexChanged += new System.EventHandler(this.comboBoxDate_SelectedIndexChanged);
             // 
