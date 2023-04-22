@@ -48,9 +48,10 @@ namespace Aday_DA
             Calendar.Show();
         }
 
-        private void bt_delete_Plan_Event_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            Form_Aurelio Aurelio = new Form_Aurelio();
+            Aurelio.Show();
         }
     }
 }
