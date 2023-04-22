@@ -11,6 +11,7 @@ namespace Aday_DA.Classes
         public static MainController MainCntrllr;
         public static SqlConnection connectionVar;
         public static bool flagLogin;
-        public static bool flagMain;
+        public static bool flagMain;       
+        public static List<Plan> arrLstPlans = new List<Plan>();
     }
 }

@@ -18,9 +18,34 @@ namespace Aday_DA
 
         private void bt_save_Plan_Click(object sender, EventArgs e)
         {
-            Form_Plans_LVws form2 = new Form_Plans_LVws();
-            form2.Show();
-            this.Close();
+            bool found = false;
+
+            if (txtBox_Title.Text == "")
+            {
+                MessageBox.Show("You cannot create a plan without providing a title.");
+            }
+            else if (Global.arrLstPlans.Count != 0)
+            {
+                foreach (Plan plan in Global.arrLstPlans)
+                {
+                    if (plan.GetTitle().Equals(txtBox_Title.Text))
+                    {
+                        MessageBox.Show("You already have this plan in your calendar.");
+                        txtBox_Title.Text = "";
+                        found = true;
+                    }
+                }
+            }        
+            
+            if(!found)
+            {
+                //Global.arrLstPlan.Add(txtBox_Title.Text);
+                Plan planobj = new Plan(txtBox_Title.Text);
+                Global.arrLstPlans.Add(planobj);
+
+                MessageBox.Show("Plan " + txtBox_Title.Text + " created successfully.");
+                txtBox_Title.Text = "";
+            }
         }
 
         private void Form_AddPlan_Load(object sender, EventArgs e)
@@ -30,21 +55,7 @@ namespace Aday_DA
 
         private void bt_close_Plan_Event_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //Form_Main form2 = new Form_Main();
-            //form2.Show();
-
-            if (Global.flagMain)
-            {
-                this.Close();
-                Form_Main formMain = new Form_Main();
-                //form2.BringToFront();
-                formMain.Show();
-            }
-            else
-            {
-                this.Enabled = true;
-            }
+            this.Close();
         }
     }
 }

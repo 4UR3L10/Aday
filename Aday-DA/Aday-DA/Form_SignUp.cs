@@ -200,17 +200,24 @@ namespace Aday_DA.Resources
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            if (Global.flagLogin)
+            this.Close();
+        }
+
+        private void textBoxPassword_Enter(object sender, EventArgs e)
+        {
+            if (textBoxPassword.Text == "Type Your Password")
             {
-                this.Close();
-                Form_Login formLogin = new Form_Login();
-                //form2.BringToFront();
-                formLogin.Show();
+                textBoxPassword.Text = "";
+                textBoxPassword.PasswordChar = '*';
             }
-            else
+        }
+
+        private void textBoxPasswordVerify_Enter(object sender, EventArgs e)
+        {
+            if (textBoxPasswordVerify.Text == "Verify Your Password")
             {
-                this.Enabled = true;
+                textBoxPasswordVerify.Text = "";
+                textBoxPasswordVerify.PasswordChar = '*';
             }
         }
     }
