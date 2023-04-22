@@ -35,6 +35,8 @@ namespace Aday_DA
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHeader = new System.Windows.Forms.Label();
             this.timerGlobal = new System.Windows.Forms.Timer(this.components);
+            this.comboBoxDate = new System.Windows.Forms.ComboBox();
+            this.labelPlan = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,9 +45,9 @@ namespace Aday_DA
             this.flowLayoutPanelPlans.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanelPlans.Location = new System.Drawing.Point(21, 83);
+            this.flowLayoutPanelPlans.Location = new System.Drawing.Point(21, 123);
             this.flowLayoutPanelPlans.Name = "flowLayoutPanelPlans";
-            this.flowLayoutPanelPlans.Size = new System.Drawing.Size(776, 753);
+            this.flowLayoutPanelPlans.Size = new System.Drawing.Size(776, 713);
             this.flowLayoutPanelPlans.TabIndex = 1;
             // 
             // bt_close_Calendar
@@ -86,11 +88,31 @@ namespace Aday_DA
             // 
             this.timerGlobal.Tick += new System.EventHandler(this.timerGlobal_Tick);
             // 
+            // comboBoxDate
+            // 
+            this.comboBoxDate.FormattingEnabled = true;
+            this.comboBoxDate.Location = new System.Drawing.Point(258, 77);
+            this.comboBoxDate.Name = "comboBoxDate";
+            this.comboBoxDate.Size = new System.Drawing.Size(262, 28);
+            this.comboBoxDate.TabIndex = 20;
+            this.comboBoxDate.SelectedIndexChanged += new System.EventHandler(this.comboBoxDate_SelectedIndexChanged);
+            // 
+            // labelPlan
+            // 
+            this.labelPlan.AutoSize = true;
+            this.labelPlan.Location = new System.Drawing.Point(211, 80);
+            this.labelPlan.Name = "labelPlan";
+            this.labelPlan.Size = new System.Drawing.Size(41, 20);
+            this.labelPlan.TabIndex = 19;
+            this.labelPlan.Text = "Date";
+            // 
             // Form_Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 985);
+            this.Controls.Add(this.comboBoxDate);
+            this.Controls.Add(this.labelPlan);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bt_close_Calendar);
             this.Controls.Add(this.flowLayoutPanelPlans);
@@ -99,6 +121,7 @@ namespace Aday_DA
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,5 +131,7 @@ namespace Aday_DA
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.Timer timerGlobal;
+        private System.Windows.Forms.ComboBox comboBoxDate;
+        private System.Windows.Forms.Label labelPlan;
     }
 }
