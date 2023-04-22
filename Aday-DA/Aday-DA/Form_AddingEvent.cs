@@ -7,6 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using Aday_DA.Classes;
 using Microsoft.Toolkit.Uwp.Notifications;
+using System.IO;
+using System.Text;
+using System.Diagnostics;
 
 namespace Aday_DA
 {
@@ -143,7 +146,9 @@ namespace Aday_DA
 
         private void bt_close_Adding_Event_Click(object sender, EventArgs e)
         {
-                this.Close();
+            
+            
+            this.Close();
         }
     }
 }

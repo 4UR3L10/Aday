@@ -17,7 +17,8 @@ namespace Aday_DA
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Login());
+            //Application.Run(new Form_Login());
+            Application.Run(new Form_WILLIAM());
         }
     }
 }
