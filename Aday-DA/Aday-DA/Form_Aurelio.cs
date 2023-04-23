@@ -18,22 +18,13 @@ namespace Aday_DA
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            DateTime d = dateTimePickerPlanDate.Value;
-            DateTime t = dateTimePicker_StartDate.Value;
-            string[] dateFormats = d.Date.GetDateTimeFormats();
-
-            //MessageBox.Show(t.ToShortTimeString());
-
-            DateTime combines = new DateTime(d.Year, d.Month, d.Day, t.Hour, t.Minute, t.Second, t.Millisecond);
-            MessageBox.Show(combines.ToString());
-
-            DateTime july28 = new DateTime(2009, 7, 28, 5, 23, 15, 16);
-            //MessageBox.Show(july28.ToString());
-
-            //MessageBox.Show(dateFormats[0] + " ");
-
-
+            foreach (ListViewItem item in listView1.Items)
+            {
+                if (item.Selected)
+                {
+                    listView1.Items.RemoveAt(item.Index);
+                }
+            }
 
         }
     }

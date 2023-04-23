@@ -270,6 +270,7 @@ namespace Aday_DA
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_Change_Password";
             this.Text = "Aday Forgot Change Password";

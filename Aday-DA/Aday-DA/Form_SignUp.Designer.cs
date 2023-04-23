@@ -361,6 +361,7 @@ namespace Aday_DA.Resources
             this.Controls.Add(this.panelLastName);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_SignUp";
             this.Text = "Aday Sign Up";
