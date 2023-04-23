@@ -29,35 +29,46 @@ namespace Aday_DA
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker_StartDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerPlanDate = new System.Windows.Forms.DateTimePicker();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "a",
+            "b",
+            "c"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("b");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("c");
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dateTimePicker_StartDate
+            // listView1
             // 
-            this.dateTimePicker_StartDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker_StartDate.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker_StartDate.Location = new System.Drawing.Point(269, 212);
-            this.dateTimePicker_StartDate.Name = "dateTimePicker_StartDate";
-            this.dateTimePicker_StartDate.ShowUpDown = true;
-            this.dateTimePicker_StartDate.Size = new System.Drawing.Size(262, 27);
-            this.dateTimePicker_StartDate.TabIndex = 3;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.listView1.HideSelection = false;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
+            this.listView1.Location = new System.Drawing.Point(136, 56);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(413, 180);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // dateTimePickerPlanDate
+            // columnHeader1
             // 
-            this.dateTimePickerPlanDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerPlanDate.Location = new System.Drawing.Point(269, 170);
-            this.dateTimePickerPlanDate.Name = "dateTimePickerPlanDate";
-            this.dateTimePickerPlanDate.Size = new System.Drawing.Size(262, 27);
-            this.dateTimePickerPlanDate.TabIndex = 8;
+            this.columnHeader1.Text = "Name";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(348, 270);
+            this.button1.Location = new System.Drawing.Point(167, 267);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 9;
+            this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -68,8 +79,7 @@ namespace Aday_DA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePickerPlanDate);
-            this.Controls.Add(this.dateTimePicker_StartDate);
+            this.Controls.Add(this.listView1);
             this.Name = "Form_Aurelio";
             this.Text = "Form_Aurelio";
             this.ResumeLayout(false);
@@ -78,8 +88,8 @@ namespace Aday_DA
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker_StartDate;
-        private System.Windows.Forms.DateTimePicker dateTimePickerPlanDate;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Button button1;
     }
 }

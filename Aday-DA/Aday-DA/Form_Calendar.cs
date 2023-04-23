@@ -144,5 +144,12 @@ namespace Aday_DA
                 }
             }
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            //ListViewItem item1 = new ListViewItem();
+            //item1.Selected
+
+        }
     }
 }
