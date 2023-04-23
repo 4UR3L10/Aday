@@ -116,7 +116,10 @@ namespace Aday_DA
                     {
                         if (plan.GetTitle().Equals(selectedPlan))
                         {
-                            Event userEventObj = new Event(txtBox_Title.Text, dateTimePicker_StartDate.Value, dateTimePicker_EndDate.Value, txtBox_Location.Text, txtBox_Description.Text);
+                            DateTime startTime = new DateTime(plan.GetPlanDate().Year, plan.GetPlanDate().Month, plan.GetPlanDate().Day, dateTimePicker_StartDate.Value.Hour, dateTimePicker_StartDate.Value.Minute, dateTimePicker_StartDate.Value.Second, dateTimePicker_StartDate.Value.Millisecond);
+                            DateTime endTime = new DateTime(plan.GetPlanDate().Year, plan.GetPlanDate().Month, plan.GetPlanDate().Day, dateTimePicker_EndDate.Value.Hour, dateTimePicker_EndDate.Value.Minute, dateTimePicker_EndDate.Value.Second, dateTimePicker_EndDate.Value.Millisecond);
+
+                            Event userEventObj = new Event(txtBox_Title.Text, startTime, endTime, txtBox_Location.Text, txtBox_Description.Text);
                             userEventObj.isHighImportance = chkBox_isHighImportance.Checked;
                             userEventObj.isAllDay = chkBox_isAllDay.Checked;
 
