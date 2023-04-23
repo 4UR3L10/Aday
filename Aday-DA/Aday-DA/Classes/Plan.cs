@@ -39,6 +39,12 @@ namespace Aday_DA.Classes
             return dateFormats[5];
         }
 
+        public String GetPlanDateDefaultFormatString()
+        {
+            string[] dateFormats = planDate.Date.GetDateTimeFormats();
+            return dateFormats[0];
+        }
+
         // Setters.
         public void SetTitle(string title)
         {
