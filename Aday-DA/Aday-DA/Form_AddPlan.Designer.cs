@@ -29,6 +29,7 @@ namespace Aday_DA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AddPlan));
             this.bt_save_Plan = new System.Windows.Forms.Button();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.txtBox_Title = new System.Windows.Forms.TextBox();
@@ -136,6 +137,7 @@ namespace Aday_DA
             this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.txtBox_Title);
             this.Controls.Add(this.bt_save_Plan);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_AddPlan";
             this.Text = "Add Plan";
             this.Load += new System.EventHandler(this.Form_AddPlan_Load);
