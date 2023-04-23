@@ -33,6 +33,7 @@ namespace Aday_DA
             bool errorFound = false;
             string selectedPlan = "";
 
+
             // Check for DropDown Empty.
             if (comboBoxDate.SelectedIndex == -1)
             {
@@ -59,6 +60,12 @@ namespace Aday_DA
             else if (dateTimePicker_EndDate.Value == dateTimePicker_EndDate.MinDate)
             {
                 MessageBox.Show("You cannot create a event without selecting an End Date Time.");
+                errorFound = true;
+            }
+            // Start timee is less than End Time.
+            else if (dateTimePicker_EndDate.Value < dateTimePicker_StartDate.Value)
+            {
+                MessageBox.Show("Start time cannot be less than End Time.");
                 errorFound = true;
             }
             else if (txtBox_Location.Text == "")
@@ -113,7 +120,10 @@ namespace Aday_DA
                     {
                         if (plan.GetTitle().Equals(selectedPlan))
                         {
-                            Event userEventObj = new Event(txtBox_Title.Text, dateTimePicker_StartDate.Value, dateTimePicker_EndDate.Value, txtBox_Location.Text, txtBox_Description.Text);
+                            DateTime startTime = new DateTime(plan.GetPlanDate().Year, plan.GetPlanDate().Month, plan.GetPlanDate().Day, dateTimePicker_StartDate.Value.Hour, dateTimePicker_StartDate.Value.Minute, dateTimePicker_StartDate.Value.Second, dateTimePicker_StartDate.Value.Millisecond);
+                            DateTime endTime = new DateTime(plan.GetPlanDate().Year, plan.GetPlanDate().Month, plan.GetPlanDate().Day, dateTimePicker_EndDate.Value.Hour, dateTimePicker_EndDate.Value.Minute, dateTimePicker_EndDate.Value.Second, dateTimePicker_EndDate.Value.Millisecond);
+
+                            Event userEventObj = new Event(txtBox_Title.Text, startTime, endTime, txtBox_Location.Text, txtBox_Description.Text);
                             userEventObj.isHighImportance = chkBox_isHighImportance.Checked;
                             userEventObj.isAllDay = chkBox_isAllDay.Checked;
 
@@ -164,6 +174,22 @@ namespace Aday_DA
                     }                    
                 }
             }            
+        }
+
+        private void chkBox_isAllDay_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkBox_isAllDay.Checked)
+            {
+                dateTimePicker_StartDate.Value = new DateTime(2023, 12, 01);
+                dateTimePicker_StartDate.Enabled = false;
+                dateTimePicker_EndDate.Value = new DateTime(2024, 12, 01);
+                dateTimePicker_EndDate.Enabled = false;
+            }
+            else
+            {
+                dateTimePicker_StartDate.Enabled = true;
+                dateTimePicker_EndDate.Enabled = true;
+            }
         }
     }
 }

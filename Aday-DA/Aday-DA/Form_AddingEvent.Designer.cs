@@ -29,6 +29,7 @@ namespace Aday_DA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AddEvent));
             this.txtBox_Title = new System.Windows.Forms.TextBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.dateTimePicker_StartDate = new System.Windows.Forms.DateTimePicker();
@@ -163,6 +164,7 @@ namespace Aday_DA
             this.chkBox_isAllDay.TabIndex = 9;
             this.chkBox_isAllDay.Text = "All Day";
             this.chkBox_isAllDay.UseVisualStyleBackColor = true;
+            this.chkBox_isAllDay.CheckedChanged += new System.EventHandler(this.chkBox_isAllDay_CheckedChanged);
             // 
             // bt_save_Event
             // 
@@ -270,6 +272,7 @@ namespace Aday_DA
             this.Controls.Add(this.dateTimePicker_StartDate);
             this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.txtBox_Title);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_AddEvent";
             this.Text = "Adding Event(s)";
             this.panel1.ResumeLayout(false);

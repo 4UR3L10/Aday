@@ -53,5 +53,11 @@ namespace Aday_DA
             Form_Aurelio Aurelio = new Form_Aurelio();
             Aurelio.Show();
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            Form_Delete Delete = new Form_Delete();
+            Delete.Show();
+        }
     }
 }

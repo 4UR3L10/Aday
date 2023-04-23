@@ -30,6 +30,7 @@ namespace Aday_DA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Calendar));
             this.flowLayoutPanelPlans = new System.Windows.Forms.FlowLayoutPanel();
             this.bt_close_Calendar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -116,6 +117,7 @@ namespace Aday_DA
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bt_close_Calendar);
             this.Controls.Add(this.flowLayoutPanelPlans);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Calendar";
             this.Text = "Form_Calendar";
             this.panel1.ResumeLayout(false);

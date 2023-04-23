@@ -18,32 +18,14 @@ namespace Aday_DA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(dateTimePicker1.Value.ToShortDateString().ToString());
-
-            //MessageBox.Show(dateTimePicker2.Value.TimeOfDay.ToString());
-            MessageBox.Show(dateTimePicker2.Value.ToShortTimeString().ToString());
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            List<String> dates = new List<String>();
-
-            // Load all the Existing Plan.
-            foreach (Plan plan in Global.arrLstPlans)
+            foreach (ListViewItem item in listView1.Items)
             {
-                //comboBox1.Items.Add(plan.GetPlanDate().ToShortDateString());
-                dates.Add(plan.GetPlanDateYearFormatString());
-                //plan.GetPlanDate().Date.
-
-                //MM/DD/YYYY
+                if (item.Selected)
+                {
+                    listView1.Items.RemoveAt(item.Index);
+                }
             }
 
-            dates.Sort();
-
-            foreach (String strdate in dates)
-            {
-                comboBox1.Items.Add(strdate);       
-            }
         }
     }
 }
