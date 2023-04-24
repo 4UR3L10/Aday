@@ -83,11 +83,27 @@ namespace Aday_DA.Classes
                                 Console.WriteLine("No. of Minutes (Difference) = {0}", ts.TotalMinutes);
                                 if (ts.TotalMinutes <= 1 && ts.TotalMinutes > 0)
                                 {
+                                    string dirName = AppDomain.CurrentDomain.BaseDirectory; // Starting Dir
+                                    FileInfo fileInfo = new FileInfo(dirName);
+                                    DirectoryInfo parentDir = fileInfo.Directory.Parent;
+                                    string parentDirName = parentDir.FullName; // Parent of Starting Dir
+                                    string dirName2 = parentDirName;
+                                    FileInfo fileInfo2 = new FileInfo(dirName2);
+                                    DirectoryInfo parentDir2 = fileInfo2.Directory.Parent;
+                                    string parentDirName2 = parentDir2.FullName;
+                                    string path = parentDirName2 + @"\Resources\Aday.ico";
+
                                     new ToastContentBuilder()
                                     .AddArgument("action", "viewConversation")
                                     .AddArgument("conversationId", 9813)    
                                     .AddText("Event Started")
                                     .AddText("The following event:" + evnt.GetTitle() + " for today " + DateTime.Now.ToString() + " on plan " + plan.GetTitle() + " just started.")
+                                    .AddAppLogoOverride(new Uri("file:///" + path, UriKind.Absolute), ToastGenericAppLogoCrop.Circle)
+                                    .AddInputTextBox("tbReply", placeHolderContent: "Type a response")
+                                    .AddButton(new ToastButton()
+                                    .SetContent("Dismiss")
+                                    .AddArgument("action", "like")
+                                    .SetBackgroundActivation())
                                     .Show();
                                 }
                             }
@@ -133,11 +149,27 @@ namespace Aday_DA.Classes
 
             if(arrLstEventConflict.Count > 1)
             {
+                string dirName = AppDomain.CurrentDomain.BaseDirectory; // Starting Dir
+                FileInfo fileInfo = new FileInfo(dirName);
+                DirectoryInfo parentDir = fileInfo.Directory.Parent;
+                string parentDirName = parentDir.FullName; // Parent of Starting Dir
+                string dirName2 = parentDirName;
+                FileInfo fileInfo2 = new FileInfo(dirName2);
+                DirectoryInfo parentDir2 = fileInfo2.Directory.Parent;
+                string parentDirName2 = parentDir2.FullName;
+                string path = parentDirName2 + @"\Resources\clipart684108.png";
+
                 new ToastContentBuilder()
                 .AddArgument("action", "viewConversation")
                 .AddArgument("conversationId", 9813)
                 .AddText("Event Started")
                 .AddText("There are events that conflicts one another at this time.")
+                .AddAppLogoOverride(new Uri("file:///" + path, UriKind.Absolute), ToastGenericAppLogoCrop.Circle)
+                .AddInputTextBox("tbReply", placeHolderContent: "Type a response")
+                .AddButton(new ToastButton()
+                .SetContent("Dismiss")
+                .AddArgument("action", "like")
+                .SetBackgroundActivation())
                 .Show();
 
                 Form_Conflict conflict = new Form_Conflict();
