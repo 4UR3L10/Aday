@@ -93,6 +93,7 @@ namespace Aday_DA
             this.pictureBoxEmail.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxEmail.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBoxEmail.Image = global::Aday_DA.Resources.PicResource.clipart162850;
             this.pictureBoxEmail.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxEmail.InitialImage")));
             this.pictureBoxEmail.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -162,6 +163,7 @@ namespace Aday_DA
             this.pictureBoxEmailVerify.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxEmailVerify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxEmailVerify.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBoxEmailVerify.Image = global::Aday_DA.Resources.PicResource.clipart162850;
             this.pictureBoxEmailVerify.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxEmailVerify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxEmailVerify.Name = "pictureBoxEmailVerify";
@@ -198,6 +200,7 @@ namespace Aday_DA
             this.pictureBoxPasswordVerify.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxPasswordVerify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxPasswordVerify.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBoxPasswordVerify.Image = global::Aday_DA.Resources.PicResource.clipart684108;
             this.pictureBoxPasswordVerify.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxPasswordVerify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxPasswordVerify.Name = "pictureBoxPasswordVerify";
@@ -235,6 +238,7 @@ namespace Aday_DA
             this.PictureBoxPassword.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PictureBoxPassword.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PictureBoxPassword.Image = global::Aday_DA.Resources.PicResource.clipart684108;
             this.PictureBoxPassword.InitialImage = ((System.Drawing.Image)(resources.GetObject("PictureBoxPassword.InitialImage")));
             this.PictureBoxPassword.Location = new System.Drawing.Point(0, 0);
             this.PictureBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

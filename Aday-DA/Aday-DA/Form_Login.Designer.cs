@@ -87,6 +87,7 @@ namespace Aday_DA
             this.PictureBoxEmail.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PictureBoxEmail.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PictureBoxEmail.Image = global::Aday_DA.Resources.PicResource.clipart162850;
             this.PictureBoxEmail.Location = new System.Drawing.Point(0, 0);
             this.PictureBoxEmail.Name = "PictureBoxEmail";
             this.PictureBoxEmail.Size = new System.Drawing.Size(39, 51);

@@ -38,7 +38,6 @@ namespace Aday_DA
             this.labelHeader = new System.Windows.Forms.Label();
             this.buttonViewCalendar = new System.Windows.Forms.Button();
             this.timerGlobal = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -117,16 +116,6 @@ namespace Aday_DA
             this.buttonViewCalendar.UseVisualStyleBackColor = false;
             this.buttonViewCalendar.Click += new System.EventHandler(this.buttonViewCalendar_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(403, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 29);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.SystemColors.Highlight;
@@ -146,7 +135,6 @@ namespace Aday_DA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 338);
             this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonViewCalendar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bt_close_Main);
@@ -172,7 +160,6 @@ namespace Aday_DA
         private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.Button buttonViewCalendar;
         private System.Windows.Forms.Timer timerGlobal;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Timer timer1;
     }
