@@ -18,6 +18,7 @@ namespace Aday_DA
         public Form_Main()
         {
             InitializeComponent();
+            Global.ReadDataFromFile();
             InitializeTimer();
         }
 
@@ -55,13 +56,6 @@ namespace Aday_DA
             Calendar.FormClosed += (s, args) => this.Enabled = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form_Aurelio Aurelio = new Form_Aurelio();
-            Aurelio.Show();
-            this.Enabled = false;
-            Aurelio.FormClosed += (s, args) => this.Enabled = true;
-        }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -74,7 +68,7 @@ namespace Aday_DA
         private void InitializeTimer()
         {
             timerGlobal = new Timer();           
-            timerGlobal.Interval = 60 * 1000; // Change it to minutesssssssssssssssssssssssssssssssssssssssssssssss.
+            timerGlobal.Interval = 60 * 1000; // Change it to minutes.
             timerGlobal.Tick += new EventHandler(timerGlobal_Tick);
             timerGlobal.Start();
         }
