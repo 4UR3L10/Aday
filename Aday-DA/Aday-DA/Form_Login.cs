@@ -54,10 +54,9 @@ namespace Aday_DA
         private void btnLogin_Click(object sender, EventArgs e)
         {
             // Bypass Login For Testing Purposes.
-            //if (textBoxEmail.Text == "asdf" && textBoxEmail.Text == "asdf")
-            if (true)
-            {
-                //asdf  <------------------------------------------------------------------------------------------------------------------------
+            if (textBoxEmail.Text == "asdf" && textBoxEmail.Text == "asdf")
+            //if (true)
+            {                
                 Form_Main newMain = new Form_Main();
                 newMain.Show();
                 this.Enabled = false;
@@ -139,6 +138,7 @@ namespace Aday_DA
 
         private void labelSignOut_Click(object sender, EventArgs e)
         {
+            Global.WriteToDataFile();
             this.Close();
         }
 

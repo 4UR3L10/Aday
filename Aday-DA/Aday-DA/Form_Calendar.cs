@@ -16,15 +16,6 @@ namespace Aday_DA
         {
             InitializeComponent();
 
-            //InitializeTimer();
-
-
-            //// Create a new Timer control
-            //timerGlobal = new Timer();
-            //timerGlobal.Interval = 1000; // Change it to minutesssssssssssssssssssssssssssssssssssssssssssssss.
-            //timerGlobal.Tick += new EventHandler(timerGlobal_Tick);
-            //timerGlobal.Start();
-
             // Load all the Existing Plan Dates.
             foreach (String strdate in Global.GetOrderedPlanDates())
             {
