@@ -180,7 +180,7 @@ namespace Aday_DA.Classes
         public static void WriteToDataFile()
         {
             // Open the text file and write the data to it
-            using (StreamWriter writer = new StreamWriter("dddataaa.txt", false))
+            using (StreamWriter writer = new StreamWriter("data.txt", false))
             {
                 // If plans exists.
                 if (Global.arrLstPlans.Count > 0)
@@ -204,7 +204,7 @@ namespace Aday_DA.Classes
         public static void ReadDataFromFile()
         {
             // Open the text file using a StreamReader
-            using (StreamReader reader = new StreamReader("dddataaa.txt"))
+            using (StreamReader reader = new StreamReader("data.txt"))
             {
                 // Read the contents of the text file line by line
                 string line;
