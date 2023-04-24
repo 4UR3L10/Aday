@@ -18,6 +18,7 @@ namespace Aday_DA
         public Form_Main()
         {
             InitializeComponent();
+            InitializeTimer();
         }
 
         private void bt_add_Plan_Click(object sender, EventArgs e)
@@ -58,6 +59,21 @@ namespace Aday_DA
         {
             Form_Delete Delete = new Form_Delete();
             Delete.Show();
+        }
+
+        private void InitializeTimer()
+        {
+            timerGlobal = new Timer();           
+            timerGlobal.Interval = 60 * 1000; // Change it to minutesssssssssssssssssssssssssssssssssssssssssssssss.
+            timerGlobal.Tick += new EventHandler(timerGlobal_Tick);
+            timerGlobal.Start();
+        }
+
+        private void timerGlobal_Tick(object sender, EventArgs e)
+        {
+            // CHeck Every Second for an event begin time notification.
+            Global.CheckEventStart();
+            Global.CheckEventConflict();
         }
     }
 }

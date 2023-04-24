@@ -16,11 +16,14 @@ namespace Aday_DA
         {
             InitializeComponent();
 
-            // Create a new Timer control
-            timerGlobal = new Timer();
-            timerGlobal.Interval = 1000; // Change it to minutesssssssssssssssssssssssssssssssssssssssssssssss.
-            timerGlobal.Tick += new EventHandler(timerGlobal_Tick);
-            timerGlobal.Start();
+            //InitializeTimer();
+
+
+            //// Create a new Timer control
+            //timerGlobal = new Timer();
+            //timerGlobal.Interval = 1000; // Change it to minutesssssssssssssssssssssssssssssssssssssssssssssss.
+            //timerGlobal.Tick += new EventHandler(timerGlobal_Tick);
+            //timerGlobal.Start();
 
             // Load all the Existing Plan Dates.
             foreach (String strdate in Global.GetOrderedPlanDates())
@@ -32,34 +35,6 @@ namespace Aday_DA
         private void bt_close_Calendar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void timerGlobal_Tick(object sender, EventArgs e)
-        {
-            // CHeck Every Second for an event begin time notification.
-            if (Global.arrLstPlans.Count > 0)
-            {
-                foreach (Plan plan in Global.arrLstPlans)
-                {
-                    if (plan.arrLstEventProp.Count > 0)
-                    {
-                        foreach (Event evnt in plan.arrLstEventProp)
-                        {
-                            if (evnt.GetStartDateTime().ToString() == DateTime.Now.ToString())
-                            {
-                                //MessageBox.Show("The following event:" + evnt.GetTitle() + " on plan " + plan.GetTitle() + " just started.");
-
-                                new ToastContentBuilder()
-                                .AddArgument("action", "viewConversation")
-                                .AddArgument("conversationId", 9813)
-                                .AddText("Event Started")
-                                .AddText("The following event:" + evnt.GetTitle() + " on plan " + plan.GetTitle() + " just started.")
-                .               Show();
-                            }
-                        }
-                    }
-                }
-            }
         }
 
         private void comboBoxDate_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,7 +72,7 @@ namespace Aday_DA
                             // Allow the user to rearrange columns.
                             listView1.AllowColumnReorder = true;
                             // Display check boxes.
-                            listView1.CheckBoxes = true;
+                            listView1.CheckBoxes = false;
                             // Select the item and subitems when selection is made.
                             listView1.FullRowSelect = true;
                             // Display grid lines.
@@ -145,11 +120,19 @@ namespace Aday_DA
             }
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void InitializeTimer()
         {
-            //ListViewItem item1 = new ListViewItem();
-            //item1.Selected
+            timerGlobal = new Timer();
+            timerGlobal.Interval = 1000; // Change it to minutesssssssssssssssssssssssssssssssssssssssssssssss.
+            timerGlobal.Tick += new EventHandler(timerGlobal_Tick);
+            timerGlobal.Start();
+        }
 
+        private void timerGlobal_Tick(object sender, EventArgs e)
+        {
+            // CHeck Every Second for an event begin time notification.
+            Global.CheckEventStart();
+            Global.CheckEventConflict();
         }
     }
 }
