@@ -55,7 +55,7 @@ namespace Aday_DA
             // Start timee is less than End Time.
             else if (dateTimePicker_EndDate.Value < dateTimePicker_StartDate.Value)
             {
-                MessageBox.Show("Start time cannot be less than End Time.");
+                MessageBox.Show("End time cannot be less than Start Time.");
                 errorFound = true;
             }
             else if (txtBox_Location.Text == "")
