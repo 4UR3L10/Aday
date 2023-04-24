@@ -74,9 +74,9 @@ namespace Aday_DA
             this.labelHeader.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelHeader.Location = new System.Drawing.Point(77, 27);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(451, 46);
+            this.labelHeader.Size = new System.Drawing.Size(456, 46);
             this.labelHeader.TabIndex = 8;
-            this.labelHeader.Text = "ADAY FORGOT PASSWORD";
+            this.labelHeader.Text = "ADAY CHANGE PASSWORD";
             // 
             // panelEmail
             // 
@@ -270,6 +270,7 @@ namespace Aday_DA
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_Change_Password";
             this.Text = "Aday Forgot Change Password";

@@ -53,78 +53,88 @@ namespace Aday_DA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            /*
-            String email = "";
-            String password = "";
-
-            Global.connectionVar.Open();
-            // SELECT. 
-            SqlCommand commandVar = Global.connectionVar.CreateCommand();
-            commandVar.CommandType = CommandType.Text;
-
-            if (textBoxEmail.Text == "Type Your Email" && textBoxEmail.Text == "")
+            // Bypass Login For Testing Purposes.
+            //if (textBoxEmail.Text == "asdf" && textBoxEmail.Text == "asdf")
+            if (true)
             {
-                MessageBox.Show("Email cannot be blank.");
-            }
-
-
-            if (textBoxPassword.Text == "Type Your Password" && textBoxPassword.Text == "")
-            {
-                MessageBox.Show("Password cannot be blank.");
-            }
-
-            if (textBoxEmail.Text != "Type Your Email" && textBoxEmail.Text != "")
-            {
-                commandVar.CommandText = "SELECT EmailAddress FROM Customer WHERE EmailAddress = '" + textBoxEmail.Text + "'";
-                commandVar.ExecuteNonQuery();                
-                SqlDataAdapter dataAdapterVar = new SqlDataAdapter(commandVar);
-                DataTable dataTableVar = new DataTable();
-                dataAdapterVar.Fill(dataTableVar);
-                email = dataTableVar.Rows[0]["EmailAddress"].ToString();
-            }
-
-            if (textBoxPassword.Text != "Type Your Password" && textBoxPassword.Text != "")
-            {
-                //MessageBox.Show(textBoxPassword.Text);
-                byte[] data = System.Text.Encoding.ASCII.GetBytes(textBoxPassword.Text);
-                data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
-                hash = System.Text.Encoding.ASCII.GetString(data);
-                //MessageBox.Show(hash);
-                commandVar.CommandText = "SELECT Password FROM Customer WHERE Password = '" + hash + "' AND EmailAddress = '" + textBoxEmail.Text + "'";
-
-
-                //commandVar.CommandText = "SELECT Password FROM Customer WHERE Password = '" + textBoxPassword.Text + "'";
-                commandVar.ExecuteNonQuery();
-                SqlDataAdapter dataAdapterVar = new SqlDataAdapter(commandVar);
-                DataTable dataTableVar = new DataTable();
-                dataAdapterVar.Fill(dataTableVar);
-                if (dataTableVar.Rows.Count == 0)
-                {
-                    MessageBox.Show("Password is incorrect.");
-                }
-                else
-                {
-                    password = dataTableVar.Rows[0]["Password"].ToString();
-                }                    
-            }
-
-            Global.connectionVar.Close();
-
-            if (email == textBoxEmail.Text && password == hash)
-            {
-                MessageBox.Show("Login Successfully");
+                //asdf  <------------------------------------------------------------------------------------------------------------------------
                 Form_Main newMain = new Form_Main();
                 newMain.Show();
-                Global.flagLogin = true;
                 this.Enabled = false;
+                newMain.FormClosed += (s, args) => this.Enabled = true;
             }
             else
             {
-                MessageBox.Show("Email/Password is incorrect.");
+                
+                String email = "";
+                String password = "";
+
+                Global.connectionVar.Open();
+                // SELECT. 
+                SqlCommand commandVar = Global.connectionVar.CreateCommand();
+                commandVar.CommandType = CommandType.Text;
+
+                if (textBoxEmail.Text == "Type Your Email" && textBoxEmail.Text == "")
+                {
+                    MessageBox.Show("Email cannot be blank.");
+                }
+
+
+                if (textBoxPassword.Text == "Type Your Password" && textBoxPassword.Text == "")
+                {
+                    MessageBox.Show("Password cannot be blank.");
+                }
+
+                if (textBoxEmail.Text != "Type Your Email" && textBoxEmail.Text != "")
+                {
+                    commandVar.CommandText = "SELECT EmailAddress FROM Customer WHERE EmailAddress = '" + textBoxEmail.Text + "'";
+                    commandVar.ExecuteNonQuery();                
+                    SqlDataAdapter dataAdapterVar = new SqlDataAdapter(commandVar);
+                    DataTable dataTableVar = new DataTable();
+                    dataAdapterVar.Fill(dataTableVar);
+                    email = dataTableVar.Rows[0]["EmailAddress"].ToString();
+                }
+
+                if (textBoxPassword.Text != "Type Your Password" && textBoxPassword.Text != "")
+                {
+                    //MessageBox.Show(textBoxPassword.Text);
+                    byte[] data = System.Text.Encoding.ASCII.GetBytes(textBoxPassword.Text);
+                    data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+                    hash = System.Text.Encoding.ASCII.GetString(data);
+                    //MessageBox.Show(hash);
+                    commandVar.CommandText = "SELECT Password FROM Customer WHERE Password = '" + hash + "' AND EmailAddress = '" + textBoxEmail.Text + "'";
+
+
+                    //commandVar.CommandText = "SELECT Password FROM Customer WHERE Password = '" + textBoxPassword.Text + "'";
+                    commandVar.ExecuteNonQuery();
+                    SqlDataAdapter dataAdapterVar = new SqlDataAdapter(commandVar);
+                    DataTable dataTableVar = new DataTable();
+                    dataAdapterVar.Fill(dataTableVar);
+                    if (dataTableVar.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Password is incorrect.");
+                    }
+                    else
+                    {
+                        password = dataTableVar.Rows[0]["Password"].ToString();
+                    }                    
+                }
+
+                Global.connectionVar.Close();
+
+                if (email == textBoxEmail.Text && password == hash)
+                {
+                    MessageBox.Show("Login Successfully");
+                    Form_Main newMain = new Form_Main();
+                    newMain.Show();
+                    this.Enabled = false;
+                    newMain.FormClosed += (s, args) => this.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Email/Password is incorrect.");
+                }               
             }
-            */
-            Form_Main newMain = new Form_Main();
-            newMain.Show();
         }
 
         private void labelSignOut_Click(object sender, EventArgs e)
@@ -137,6 +147,7 @@ namespace Aday_DA
             Form_SignUp formSignUp = new Form_SignUp();    
             formSignUp.Show();
             this.Enabled = false;
+            formSignUp.FormClosed += (s, args) => this.Enabled = true;
         }
 
         private void textBoxPassword_Leave(object sender, EventArgs e)
@@ -161,6 +172,7 @@ namespace Aday_DA
             Form_Change_Password formChangePassword = new Form_Change_Password();
             formChangePassword.Show();
             this.Enabled = false;
+            formChangePassword.FormClosed += (s, args) => this.Enabled = true;
         }
 
         private void textBoxPassword_Enter(object sender, EventArgs e)

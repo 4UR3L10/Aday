@@ -5,16 +5,16 @@ using System.Text;
 namespace Aday_DA.Classes
 {
     class Plan
-    {
-        //Event[] Events;
-         
+    {         
         private string title;
+        private DateTime planDate;
         public List<Event> arrLstEventProp = new List<Event>();
 
         // Constructor.
-        public Plan(string title)
+        public Plan(string title, DateTime planDate)
         {            
             this.title = title;
+            this.planDate = planDate;
         }
 
         // Getters.
@@ -23,24 +23,37 @@ namespace Aday_DA.Classes
             return title;
         }
 
+        public DateTime GetPlanDate()
+        {
+            return planDate;
+        }
+
+        public String GetPlanDateString()
+        {
+            return planDate.Date.ToString();
+        }
+
+        public String GetPlanDateYearFormatString()
+        {
+            string[] dateFormats = planDate.Date.GetDateTimeFormats();          
+            return dateFormats[5];
+        }
+
+        public String GetPlanDateDefaultFormatString()
+        {
+            string[] dateFormats = planDate.Date.GetDateTimeFormats();
+            return dateFormats[0];
+        }
+
         // Setters.
         public void SetTitle(string title)
         {
             this.title = title;
         }
-
-        // Testing.
-        /*
-        public List<Event> ListInit()
+            
+        public void SetPlanDate(DateTime planDate)
         {
-            //List<Event> arrLstEvent = new List<Event>();
-            //return arrLstEvent;
-        }
-        */
-
-        public void ListInitt()
-        {
-            //List<Event> arrLstEvent = new List<Event>();
+            this.planDate = planDate;
         }
     }
 }
