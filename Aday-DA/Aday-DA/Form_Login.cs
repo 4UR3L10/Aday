@@ -91,7 +91,14 @@ namespace Aday_DA
                     SqlDataAdapter dataAdapterVar = new SqlDataAdapter(commandVar);
                     DataTable dataTableVar = new DataTable();
                     dataAdapterVar.Fill(dataTableVar);
-                    email = dataTableVar.Rows[0]["EmailAddress"].ToString();
+                    if (dataTableVar.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Email is incorrect.");
+                    }
+                    else
+                    {
+                        email = dataTableVar.Rows[0]["EmailAddress"].ToString();
+                    }
                 }
 
                 if (textBoxPassword.Text != "Type Your Password" && textBoxPassword.Text != "")
