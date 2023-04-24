@@ -16,8 +16,10 @@ namespace Aday_DA
         {
             InitializeComponent();
 
-            dateTimePicker_StartDate.MinDate = DateTime.Today;
-            dateTimePicker_EndDate.MinDate = DateTime.Today;
+            //dateTimePicker_StartDate.MinDate = DateTime.Today;
+            dateTimePicker_StartDate.Value = DateTime.Now;
+            //dateTimePicker_EndDate.MinDate = DateTime.Today;
+            dateTimePicker_EndDate.Value = DateTime.Now.AddSeconds(1);
 
             // Load all the Existing Plan Dates.
             foreach (String strdate in Global.GetOrderedPlanDates())
@@ -48,18 +50,6 @@ namespace Aday_DA
             else if (txtBox_Title.Text == "")
             {
                 MessageBox.Show("You cannot create a event without providing a title.");
-                errorFound = true;
-            }
-            // Check for Date not selected.
-            else if (dateTimePicker_StartDate.Value == dateTimePicker_StartDate.MinDate)
-            {
-                MessageBox.Show("You cannot create a event without selecting an Start Date Time.");
-                errorFound = true;
-            }
-            // Check for Date not selected.
-            else if (dateTimePicker_EndDate.Value == dateTimePicker_EndDate.MinDate)
-            {
-                MessageBox.Show("You cannot create a event without selecting an End Date Time.");
                 errorFound = true;
             }
             // Start timee is less than End Time.
@@ -99,8 +89,6 @@ namespace Aday_DA
                                         MessageBox.Show("You already have this event in this plan.");
                                         comboBoxPlan.SelectedIndex = -1;
                                         txtBox_Title.Text = "";
-                                        dateTimePicker_StartDate.Value = dateTimePicker_StartDate.MinDate;
-                                        dateTimePicker_EndDate.Value = dateTimePicker_EndDate.MinDate;
                                         txtBox_Location.Text = "";
                                         txtBox_Description.Text = "";
                                         chkBox_isHighImportance.Checked = false;
@@ -134,8 +122,6 @@ namespace Aday_DA
                             // Reset.
                             comboBoxPlan.SelectedIndex = -1;
                             txtBox_Title.Text = "";
-                            dateTimePicker_StartDate.Value = dateTimePicker_StartDate.MinDate;
-                            dateTimePicker_EndDate.Value = dateTimePicker_EndDate.MinDate;
                             txtBox_Location.Text = "";
                             txtBox_Description.Text = "";
                             chkBox_isHighImportance.Checked = false;

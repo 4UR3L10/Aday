@@ -41,6 +41,7 @@ namespace Aday_DA
             this.button1 = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -188,6 +189,7 @@ namespace Aday_DA
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
