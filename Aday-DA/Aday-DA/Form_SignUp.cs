@@ -222,5 +222,3 @@ namespace Aday_DA.Resources
         }
     }
 }
-
-//btnSignUp

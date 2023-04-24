@@ -25,12 +25,16 @@ namespace Aday_DA
         {
             Form_AddPlan AddPlan = new Form_AddPlan();
             AddPlan.Show();
+            this.Enabled = false;
+            AddPlan.FormClosed += (s, args) => this.Enabled = true;
         }
 
         private void bt_add_Event_Click(object sender, EventArgs e)
         {
             Form_AddEvent AddEvent = new Form_AddEvent();
             AddEvent.Show();
+            this.Enabled = false;
+            AddEvent.FormClosed += (s, args) => this.Enabled = true;
         }
 
         private void bt_close_Plan_Event_Click(object sender, EventArgs e)
@@ -47,18 +51,24 @@ namespace Aday_DA
         {
             Form_Calendar Calendar = new Form_Calendar();
             Calendar.Show();
+            this.Enabled = false;
+            Calendar.FormClosed += (s, args) => this.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form_Aurelio Aurelio = new Form_Aurelio();
             Aurelio.Show();
+            this.Enabled = false;
+            Aurelio.FormClosed += (s, args) => this.Enabled = true;
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             Form_Delete Delete = new Form_Delete();
             Delete.Show();
+            this.Enabled = false;
+            Delete.FormClosed += (s, args) => this.Enabled = true;
         }
 
         private void InitializeTimer()

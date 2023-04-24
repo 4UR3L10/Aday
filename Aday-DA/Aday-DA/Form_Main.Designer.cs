@@ -40,7 +40,6 @@ namespace Aday_DA
             this.timerGlobal = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonEdit = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +49,7 @@ namespace Aday_DA
             this.bt_add_Plan.BackColor = System.Drawing.SystemColors.Highlight;
             this.bt_add_Plan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_add_Plan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_add_Plan.Location = new System.Drawing.Point(12, 161);
+            this.bt_add_Plan.Location = new System.Drawing.Point(26, 152);
             this.bt_add_Plan.Name = "bt_add_Plan";
             this.bt_add_Plan.Size = new System.Drawing.Size(239, 48);
             this.bt_add_Plan.TabIndex = 0;
@@ -63,7 +62,7 @@ namespace Aday_DA
             this.bt_add_Event.BackColor = System.Drawing.SystemColors.Highlight;
             this.bt_add_Event.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_add_Event.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_add_Event.Location = new System.Drawing.Point(294, 161);
+            this.bt_add_Event.Location = new System.Drawing.Point(322, 152);
             this.bt_add_Event.Name = "bt_add_Event";
             this.bt_add_Event.Size = new System.Drawing.Size(239, 48);
             this.bt_add_Event.TabIndex = 3;
@@ -76,7 +75,7 @@ namespace Aday_DA
             this.bt_close_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(152)))), ((int)(((byte)(221)))));
             this.bt_close_Main.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_close_Main.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_close_Main.Location = new System.Drawing.Point(294, 244);
+            this.bt_close_Main.Location = new System.Drawing.Point(496, 261);
             this.bt_close_Main.Name = "bt_close_Main";
             this.bt_close_Main.Size = new System.Drawing.Size(239, 48);
             this.bt_close_Main.TabIndex = 4;
@@ -91,7 +90,7 @@ namespace Aday_DA
             this.panel1.Location = new System.Drawing.Point(1, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(830, 65);
+            this.panel1.Size = new System.Drawing.Size(886, 65);
             this.panel1.TabIndex = 6;
             // 
             // labelHeader
@@ -99,7 +98,7 @@ namespace Aday_DA
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelHeader.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelHeader.Location = new System.Drawing.Point(307, 6);
+            this.labelHeader.Location = new System.Drawing.Point(334, 6);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(214, 46);
             this.labelHeader.TabIndex = 5;
@@ -110,7 +109,7 @@ namespace Aday_DA
             this.buttonViewCalendar.BackColor = System.Drawing.SystemColors.Highlight;
             this.buttonViewCalendar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonViewCalendar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonViewCalendar.Location = new System.Drawing.Point(576, 161);
+            this.buttonViewCalendar.Location = new System.Drawing.Point(629, 152);
             this.buttonViewCalendar.Name = "buttonViewCalendar";
             this.buttonViewCalendar.Size = new System.Drawing.Size(239, 48);
             this.buttonViewCalendar.TabIndex = 7;
@@ -120,7 +119,7 @@ namespace Aday_DA
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(747, 88);
+            this.button1.Location = new System.Drawing.Point(403, 217);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 29);
             this.button1.TabIndex = 8;
@@ -133,7 +132,7 @@ namespace Aday_DA
             this.buttonDelete.BackColor = System.Drawing.SystemColors.Highlight;
             this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonDelete.Location = new System.Drawing.Point(576, 244);
+            this.buttonDelete.Location = new System.Drawing.Point(150, 261);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(239, 48);
             this.buttonDelete.TabIndex = 24;
@@ -141,25 +140,12 @@ namespace Aday_DA
             this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // buttonEdit
-            // 
-            this.buttonEdit.BackColor = System.Drawing.SystemColors.Highlight;
-            this.buttonEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonEdit.Location = new System.Drawing.Point(12, 244);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(239, 48);
-            this.buttonEdit.TabIndex = 23;
-            this.buttonEdit.Text = "Edit";
-            this.buttonEdit.UseVisualStyleBackColor = false;
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 320);
+            this.ClientSize = new System.Drawing.Size(887, 338);
             this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonViewCalendar);
             this.Controls.Add(this.panel1);
@@ -188,7 +174,6 @@ namespace Aday_DA
         private System.Windows.Forms.Timer timerGlobal;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Timer timer1;
     }
 }
